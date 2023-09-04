@@ -32,7 +32,7 @@ from MukeshRobot import (
     BOT_USERNAME,
     LOGGER,
    EVENT_LOGS,
-   JOIN_LOGGER
+   JOIN_LOGGER,
     OWNER_ID,
     START_IMG,
     SUPPORT_CHAT,
