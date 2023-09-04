@@ -31,6 +31,8 @@ from MukeshRobot import (
     BOT_NAME,
     BOT_USERNAME,
     LOGGER,
+   EVENT_LOGS,
+   JOIN_LOGGER
     OWNER_ID,
     START_IMG,
     SUPPORT_CHAT,
@@ -70,13 +72,14 @@ def get_readable_time(seconds: int) -> str:
 
     return ping_time
 PM_START_TEX = """
-ʜᴇʟʟᴏ `{}`, ʜᴏᴡ ᴀʀᴇ ʏᴏᴜ \nᴡᴀɪᴛ ᴀ ᴍᴏᴍᴇɴᴛ ʙʀᴏ . . . 
+ʜᴇʟʟᴏ `{}`, 
 """
 
 
 PM_START_TEXT = """ 
 *ʜᴇʏ* {} , 💕
-*๏ ɪ'ᴍ {} »𝐈 𝐀𝐦 𝐀 𝐀𝐝𝐯𝐚𝐧𝐜𝐞𝐝  𝐀𝐧𝐝  𝐒𝐮𝐩𝐞𝐫𝐟𝐚𝐬𝐭  𝐌𝐚𝐧𝐚𝐠𝐞𝐦𝐞𝐧𝐭
+*๏ ɪ'ᴍ {} 
+»𝐈 𝐀𝐦 𝐀 𝐀𝐝𝐯𝐚𝐧𝐜𝐞𝐝  𝐀𝐧𝐝  𝐒𝐮𝐩𝐞𝐫𝐟𝐚𝐬𝐭  𝐌𝐚𝐧𝐚𝐠𝐞𝐦𝐞𝐧𝐭
 »𝐕𝐂 𝐏𝐥𝐚𝐲𝐞𝐫 𝐖𝐢𝐭𝐡 24𝐱7 𝐀𝐜𝐭𝐢𝐯𝐞 
 » 𝐅𝐨𝐫 𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦 𝐆𝐫𝐨𝐮𝐩𝐬 𝐀𝐧𝐝 𝐂𝐡𝐚𝐧𝐧𝐞𝐥
 »𝐅𝐞𝐞𝐥 𝐋𝐚𝐠 𝐅𝐫𝐞𝐞
