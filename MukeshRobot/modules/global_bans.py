@@ -19,6 +19,7 @@ from MukeshRobot import (
     DEV_USERS,
     DRAGONS,
     EVENT_LOGS,
+   JOIN_LOGGER,
     OWNER_ID,
     STRICT_GBAN,
     SUPPORT_CHAT,
@@ -159,7 +160,7 @@ def gban(update: Update, context: CallbackContext):
 
         return
 
-     message.reply_text("On it!")
+    message.reply_text("On it!")
 
     start_time = time.time()
     datetime_fmt = "%Y-%m-%dT%H:%M"
@@ -171,12 +172,12 @@ def gban(update: Update, context: CallbackContext):
         chat_origin = "<b>{}</b>\n".format(chat.id)
 
     log_message = (
-        f"#GBANNED\n"
-        f"<b>Originated from:</b> <code>{chat_origin}</code>\n"
-        f"<b>Admin:</b> {mention_html(user.id, user.first_name)}\n"
-        f"<b>Banned User:</b> {mention_html(user_chat.id, user_chat.first_name)}\n"
-        f"<b>Banned User ID:</b> <code>{user_chat.id}</code>\n"
-        f"<b>Event Stamp:</b> <code>{current_time}</code>"
+        f"#ɢʙᴀɴɴᴇᴅ\n"
+        f"<b>ᴏʀɢɪɴɪᴛᴇᴅ ғʀᴏᴍ :</b> <code>{chat_origin}</code>\n"
+        f"<b>ᴀᴅᴍɪɴ:</b> {mention_html(user.id, user.first_name)}\n"
+        f"<b>ʙᴀɴɴᴇᴅ ᴜsᴇʀ:</b> {mention_html(user_chat.id, user_chat.first_name)}\n"
+        f"<b>ʙᴀɴɴᴇᴅ ᴜsᴇʀ ɪᴅ:</b> <code>{user_chat.id}</code>\n"
+        f"<b>ᴇᴠᴇɴᴛ sᴛᴀᴍᴘ:</b> <code>{current_time}</code>"
     )
 
     if reason:
@@ -262,7 +263,7 @@ def gban(update: Update, context: CallbackContext):
             "#EVENT"
             "You have been marked as Malicious and as such have been banned from any future groups we manage."
             f"\n<b>Reason:</b> <code>{html.escape(user.reason)}</code>"
-            f"</b>Appeal Chat:</b> @AM_YTSupport",
+            f"</b>Appeal Chat:</b> @{SUPPORT_CHAT}",
             parse_mode=ParseMode.HTML,
         )
     except:
@@ -417,7 +418,7 @@ def check_and_ban(update, user_id, should_message=True):
             text = (
                 f"<b>Alert</b>: this user is globally banned.\n"
                 f"<code>*bans them from here*</code>.\n"
-                f"<b>Appeal chat</b>: @AM_YTSUPPORT\n"
+                f"<b>Appeal chat</b>: @{SUPPORT_CHAT}\n"
                 f"<b>User ID</b>: <code>{user_id}</code>"
             )
             user = sql.get_gbanned_user(user_id)
@@ -498,7 +499,7 @@ def __user_info__(user_id):
         user = sql.get_gbanned_user(user_id)
         if user.reason:
             text += f"\n<b>ʀᴇᴀsᴏɴ:</b> <code>{html.escape(user.reason)}</code>"
-        text += f"\n<b>ᴀᴘᴘᴇᴀʟ ᴄʜᴀᴛ:</b> @AM_YTSUPPORT"
+        text += f"\n<b>ᴀᴘᴘᴇᴀʟ ᴄʜᴀᴛ:</b> @{SUPPORT_CHAT}"
     else:
         text = text.format("???")
     return text
