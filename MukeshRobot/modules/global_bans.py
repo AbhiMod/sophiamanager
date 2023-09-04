@@ -159,7 +159,7 @@ def gban(update: Update, context: CallbackContext):
 
         return
 
-     message.reply_text("#New_Gban\n𝓛𝓮 𝓑𝓱𝓪𝓲 𝓖𝓵𝓸𝓫𝓪𝓵 𝓚𝓱𝓪𝓵𝓲𝔂𝓪")
+     message.reply_text("On it!")
 
     start_time = time.time()
     datetime_fmt = "%Y-%m-%dT%H:%M"
