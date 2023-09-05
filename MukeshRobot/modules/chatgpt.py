@@ -15,8 +15,8 @@ from MukeshRobot import pbot as mukesh # This is bot's client
 from pyrogram import filters # pyrogram filters
 #  main
 BOT_TOKEN = "6129232106:AAFnvrcgz5J9Ja-bW1H6Rtb4hE6oRF6aD6Q"
-OPENAI_KEY = "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"
-openai.api_key = "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"
+OPENAI_KEY = "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"
+openai.api_key = "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"
 @mukesh.on_message(filters.command(["chatgpt","ai","ask"],  prefixes=["+", ".", "/", "-", "?", "$","#","&"]))
 async def chat(bot, message):
     
@@ -57,7 +57,7 @@ async def bard_bot(bot, message):
         await message.reply_text(f"**ᴇʀʀᴏʀ:  {e} ")
 
     '''
-openai.api_key = "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"
+openai.api_key = "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"
 @mukesh.on_message(filters.command(["image","photo","img","generate"],  prefixes=["+", ".", "/", "-", "?", "$","#","&"] ))
 async def chat(bot, message):
     try:
@@ -75,7 +75,7 @@ async def chat(bot, message):
             await message.reply_photo(image_url,caption=f"✨ᴛɪᴍᴇ ᴛᴀᴋᴇɴ {telegram_ping} ",parse_mode=ParseMode.DISABLED,reply_markup=InlineKeyboardMarkup(X)) 
     except Exception as e:
             await message.reply_text(f"**ᴇʀʀᴏʀ: **  ` {e} `")
-openai.api_key = "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"
+openai.api_key = "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"
 @mukesh.on_message(filters.command(["text","audiototext","lyrics"],  prefixes=["","+", ".", "/", "-", "?", "$","#","&"]))
 async def chat(bot, message):
     
@@ -94,6 +94,9 @@ async def chat(bot, message):
     except Exception as e:
         await message.reply_text(f"**ᴇʀʀᴏʀ: **  ` lol `")
 
-__mod_name__ = "ᴄʜᴀᴛɢᴘᴛ"
-__help__ = "/ask"
- 
+ __mod_name__ = "ᴄʜᴀᴛɢᴘᴛ"
+__help__ = """
+──「 Free For All 」──
+
+❍ /ask ᴏʀ ai.'
+"""
