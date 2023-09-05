@@ -326,6 +326,5 @@ __help__ = """
 /check_username  - Get Usernames history.
 /check_names  - check name history
 /check_names  - check name history
-/deletehistory  - delete history Data
 /leaderboard -  group chat count"""
 __mod_name__ = "Sᴀɴɢᴍᴀᴛᴀ"
