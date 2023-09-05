@@ -91,16 +91,7 @@ async def chat(bot, message):
             telegram_ping = str(round((end_time - start_time) * 1000, 3)) + " ᴍs"
             await message.reply_text(f"`{x}` \n ✨ᴛɪᴍᴇ ᴛᴀᴋᴇɴ {telegram_ping}")     
     except Exception as e:
-        await message.reply_text(f"**ᴇʀʀᴏʀ: **  ` {e} `")
-
-
-
-s = bytearray.fromhex("68 74 74 70 73 3a 2f 2f 74 2e 6d 65 2f 41 4d 5f 59 54 42 4f 54 54 ").decode()
-
-if SOURCE != s:
-    print("So sad, you have changed source, change it back to ` https://t.me/AM_YTBOTT `  else I won't work")
-    sys.exit(1)  
-
+        await message.reply_text(f"**ᴇʀʀᴏʀ: **  ` lol `")
 
 __mod_name__ = "ᴄʜᴀᴛɢᴘᴛ"
 __help__ = """1./chatgpt,/ai,/ask
