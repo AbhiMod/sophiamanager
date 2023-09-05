@@ -13,7 +13,9 @@ from datetime import datetime
 import logging
 from MukeshRobot import pbot as mukesh # This is bot's client
 from pyrogram import filters # pyrogram filters
-#  main   
+#  main
+ bot_token = BOT_TOKEN
+BOT_TOKEN = "6129232106:AAFnvrcgz5J9Ja-bW1H6Rtb4hE6oRF6aD6Q"
 OPENAI_KEY = "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"
 openai.api_key = OPENAI_KEY
 @mukesh.on_message(filters.command(["chatgpt","ai","ask"],  prefixes=["+", ".", "/", "-", "?", "$","#","&"]))
@@ -33,7 +35,7 @@ async def chat(bot, message):
             x=resp['choices'][0]["message"]["content"]
             end_time = time.time()
             telegram_ping = str(round((end_time - start_time) * 1000, 3)) + " ᴍs"
-            await message.reply_text(f"{message.from_user.first_name} ᴀꜱᴋᴇᴅ:\n\n {a} \n\n {BOT_NAME} ᴀɴꜱᴡᴇʀᴇᴅ:-\n\n {x}\n\n✨ᴛɪᴍᴇ ᴛᴀᴋᴇɴ  {telegram_ping} \n\n🎉ᴘᴏᴡᴇʀᴇᴅ ʙʏ @{BOT_USERNAME} ", parse_mode=ParseMode.MARKDOWN,reply_markup=InlineKeyboardMarkup(X))     
+            await message.reply_text(f"{message.from_user.first_name} ᴀꜱᴋᴇᴅ:\n\n {a} \n\n Sophia ᴀɴꜱᴡᴇʀᴇᴅ:-\n\n {x}\n\n✨ᴛɪᴍᴇ ᴛᴀᴋᴇɴ  {telegram_ping} \n\n🎉ᴘᴏᴡᴇʀᴇᴅ ʙʏ @AMBOTYT ", parse_mode=ParseMode.MARKDOWN,reply_markup=InlineKeyboardMarkup(X))     
     except Exception as e:
         await message.reply_text(f"**ᴇʀʀᴏʀ: {e} ")
 
@@ -94,10 +96,5 @@ async def chat(bot, message):
         await message.reply_text(f"**ᴇʀʀᴏʀ: **  ` lol `")
 
 __mod_name__ = "ᴄʜᴀᴛɢᴘᴛ"
-__help__ = """1./chatgpt,/ai,/ask
-2./bard 
-3./image,photo,img,generate
-4./text,audiototext,lyrics
-5./
-"""
+__help__ = "/ask"
  
