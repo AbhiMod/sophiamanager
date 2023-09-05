@@ -12,7 +12,12 @@ from MukeshRobot import pbot as app
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 import asyncio
 
-app = pyrogram.Client("ProfilePundit", bot_token={TOKEN}, api_id={API_ID}, api_hash={API_HASH})
+app = Client(
+    "ProfilePundit",
+    api_id={API_ID},  # Replace with your API ID
+    api_hash={API_HASH},  # Replace with your API Hash
+    bot_token={TOKEN}  # Replace with your bot token
+)
 
 client = MongoClient("mongodb+srv://yonerobot:kushal55@pundit.yjfpa8v.mongodb.net/?retryWrites=true&w=majority")
 db = client["ProfilePundit"]
