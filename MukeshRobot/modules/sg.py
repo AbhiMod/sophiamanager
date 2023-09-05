@@ -11,7 +11,6 @@ from datetime import datetime
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 import asyncio
 
-scheduler = AsyncIOScheduler()
 client = MongoClient("mongodb+srv://yonerobot:kushal55@pundit.yjfpa8v.mongodb.net/?retryWrites=true&w=majority")
 db = client["ProfilePundit"]
 users = db["users"]
@@ -324,10 +323,6 @@ async def check_groups():
 scheduler.add_job(check_groups, "interval", hours=1)
 
 # Start the Pyrogram client and the event loop
-def start():
-    app.start()
-    scheduler.start()
-    asyncio.get_event_loop().run_forever()
 
 # Run the start function
 __help__ = """
