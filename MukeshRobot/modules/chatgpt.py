@@ -14,9 +14,8 @@ import logging
 from MukeshRobot import pbot as mukesh # This is bot's client
 from pyrogram import filters # pyrogram filters
 #  main
-BOT_TOKEN = "5894209648:AAEhbFU58eQjXShzQpF2VZ4B5m5tG_QPitI"
-OPENAI_KEY = "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"
-openai.api_key = "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"
+OPENAI_KEY = "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"
+openai.api_key = "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"
 @mukesh.on_message(filters.command(["chatgpt","ai","ask"],  prefixes=["+", ".", "/", "-", "?", "$","#","&"]))
 async def chat(bot, message):
     
@@ -57,7 +56,7 @@ async def bard_bot(bot, message):
         await message.reply_text(f"**ᴇʀʀᴏʀ:  {e} ")
 
     '''
-openai.api_key = "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"
+openai.api_key = "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"
 @mukesh.on_message(filters.command(["image","photo","img","generate"],  prefixes=["+", ".", "/", "-", "?", "$","#","&"] ))
 async def chat(bot, message):
     try:
@@ -75,7 +74,7 @@ async def chat(bot, message):
             await message.reply_photo(image_url,caption=f"✨ᴛɪᴍᴇ ᴛᴀᴋᴇɴ {telegram_ping} ",parse_mode=ParseMode.DISABLED,reply_markup=InlineKeyboardMarkup(X)) 
     except Exception as e:
             await message.reply_text(f"**ᴇʀʀᴏʀ: **  ` {e} `")
-openai.api_key = "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"
+openai.api_key = "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"
 @mukesh.on_message(filters.command(["text","audiototext","lyrics"],  prefixes=["","+", ".", "/", "-", "?", "$","#","&"]))
 async def chat(bot, message):
     
