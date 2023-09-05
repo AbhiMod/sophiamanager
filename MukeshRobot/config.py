@@ -21,7 +21,7 @@ class Config(object):
     )
     TIME_API_KEY = "9HK7J0H25AKQ"
     # Get your API key from https://timezonedb.com/api
-    OPENAI_KEY = "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"
+    OPENAI_KEY = ""
     openai.api_key = ""
     # Optional fields
     CHATBOT_API="" # get it from @FallenChat_Bot using /token
