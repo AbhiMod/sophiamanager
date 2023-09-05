@@ -54,7 +54,6 @@ if ENV:
     )
     STRICT_GBAN = bool(os.environ.get("STRICT_GBAN", True))
     SUPPORT_CHAT = os.environ.get("SUPPORT_CHAT", "+jLfuucjsi8kzMzE1")
-    openai.api_key = os.environ.get("OPENAI_KEY", "")
     TEMP_DOWNLOAD_DIRECTORY = os.environ.get("TEMP_DOWNLOAD_DIRECTORY", "./")
     TOKEN = os.environ.get("TOKEN", None)
     OPENAI_KEY = os.environ.get("OPENAI_KEY","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")
