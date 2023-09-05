@@ -5,15 +5,15 @@ from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 import pymongo
 import MukeshRobot
-from MukeshRobot import OWNER_ID, pbot, dispatcher, DRAGONS 
+from MukeshRobot import OWNER_ID, pbot, dispatcher, DRAGONS
 from pymongo import MongoClient
 from datetime import datetime
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 import asyncio
 
 scheduler = AsyncIOScheduler()
-
-db = client["sophia"]
+client = MongoClient("mongodb+srv://yonerobot:kushal55@pundit.yjfpa8v.mongodb.net/?retryWrites=true&w=majority")
+db = client["ProfilePundit"]
 users = db["users"]
 groups = db["groups"]
 user_messages = db["user_messages"]
