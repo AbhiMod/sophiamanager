@@ -4,6 +4,8 @@ import pyrogram
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 import pymongo
+import MukeshRobot
+from MukeshRobot import OWNER_ID, pbot, dispatcher, DRAGONS 
 from pymongo import MongoClient
 from datetime import datetime
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
@@ -11,36 +13,11 @@ import asyncio
 
 scheduler = AsyncIOScheduler()
 
-
-# Set up a logger object
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.INFO)
-
-
-# Set up a Pyrogram bot object
-app = pyrogram.Client("ProfilePundit", bot_token="6215758518:AAHy892YGE7Sd3dWV3Oc2sELM4PaDOXkJsE", api_id=12227067, api_hash="b463bedd791aa733ae2297e6520302fe")
-
-
-# Set up a MongoDB client object and connect to the database
-client = MongoClient("mongodb+srv://yonerobot:kushal55@pundit.yjfpa8v.mongodb.net/?retryWrites=true&w=majority")
-db = client["ProfilePundit"]
+db = client["sophia"]
 users = db["users"]
 groups = db["groups"]
 user_messages = db["user_messages"]
-OWNER_ID = [2105971379, 5360305806 , 6204761408 ] 
-
-# define the start text as a constant string 
-START_TEXT = "**Profile Pundit** is your personal profile assistant on Telegram. Add me to any group chat and I'll start recording user data immediately. Use /help for more info. Click the button below to add me now!"
-
-# Define the help text as a constant string
-HELP_TEXT = (
-    "Here are the commands you can use:\n\n"
-    "• `/start` - Start the bot and join the group to see your profile history.\n\n"
-    "• `/gethistory` - Get your profile history.\n\n"
-     "• `/broadcast` - Only for sudo users .\n\n"
-    "• `/stats` - Get the total number of users in the database."
-    
-)
+ 
 
 def get_target_user_id(message):
     if message.reply_to_message and message.reply_to_message.from_user:
@@ -58,70 +35,8 @@ def get_target_user_id(message):
             return int(target)
     return None
     
-@app.on_message(filters.command("broadcast") & filters.user(OWNER_ID))
-async def broadcast_command(client, message):
-    await broadcast_message(client, message)
-async def broadcast_message(client, message):
-    try:
-        # Check if the message sender is the bot owner (you can modify this condition as needed)
-        if message.from_user.id not in OWNER_ID:
-            await message.reply_text("You are not authorized to use this command.")
-            return
-
-        # Extract the message to be broadcasted (you can modify this as needed)
-        if len(message.text.split()) > 1:
-            broadcast_text = " ".join(message.text.split()[1:])
-        else:
-            await message.reply_text("Please provide the message to broadcast.")
-            return
-
-        # Get a list of all the groups the bot is in
-        group_ids = [str(group["group_id"]) for group in groups.find()]
-        
-        # Broadcast the message to all groups
-        for group_id in group_ids:
-            try:
-                await client.send_message(chat_id=group_id, text=broadcast_text)
-                await asyncio.sleep(1)  # Sleep for 1 second to avoid rate limiting
-            except Exception as e:
-                # Handle any errors that occur while sending to a specific group
-                print(f"Error sending to group {group_id}: {str(e)}")
-
-        await message.reply_text(f"Broadcasted the message to {len(group_ids)} groups.")
-
-    except Exception as e:
-        await client.send_message(OWNER_ID, f"An error occurred: {str(e)}")
-        logger.error(f"An error occurred: {str(e)}")
-        logger.error(traceback.format_exc())
-
-# Function to handle the /start command
-@app.on_message(filters.command("start") & filters.private)
-def start(client, message):
-    buttons = [
-        [
-            InlineKeyboardButton(
-                text="➕ ᴀᴅᴅ ᴍᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ", url="t.me/Profile_Pundit_bot?startgroup=true"
-            )
-        ],
-        [
-            InlineKeyboardButton(
-                text="ᴀʙᴏᴜᴛ ᴀᴍʙᴏᴛ 💕", url="https://t.me/About_AMBot"
-            )
-        ]
-    ]
-    keyboard = InlineKeyboardMarkup(buttons)
-    message.reply_text(START_TEXT, reply_markup=keyboard)
-
-
-
-# Use the constant string in the function
-@app.on_message(filters.command("help"))
-def help(client, message):
-    message.reply_text(HELP_TEXT)
-
-
 # Function to get name and username history for a user
-@app.on_message(filters.command("gethistory"))
+@pbot.on_message(filters.command("gethistory"))
 def gethistory(client, message):
     try:
         user_id = get_target_user_id(message)
@@ -158,7 +73,7 @@ def gethistory(client, message):
 
 
 # Function to get username history for a user
-@app.on_message(filters.command("check_username"))
+@pbot.on_message(filters.command("check_username"))
 def check_username(client, message):
     try:
         user_id = get_target_user_id(message)
@@ -191,7 +106,7 @@ def check_username(client, message):
 
 
 # Function to get name history for a user
-@app.on_message(filters.command("check_names"))
+@pbot.on_message(filters.command("check_names"))
 def check_names(client, message):
     try:
         user_id = get_target_user_id(message)
@@ -222,7 +137,7 @@ def check_names(client, message):
         logger.error(traceback.format_exc())
 
 
-@app.on_message(filters.command("leaderboard") & filters.group)
+@pbot.on_message(filters.command("leaderboard") & filters.group)
 def leaderboard_command(client, message):
     try:
         group_id = message.chat.id
@@ -244,7 +159,7 @@ def leaderboard_command(client, message):
 
 
 # Function to delete name and username history for a user
-@app.on_message(filters.command("deletehistory") & filters.user(OWNER_ID))
+@pbot.on_message(filters.command("deletehistory") & filters.user(OWNER_ID))
 def deletehistory(client, message):
     user_id = get_target_user_id(message)
     if not user_id:
@@ -260,7 +175,7 @@ def deletehistory(client, message):
     message.reply_text("Name and username history for this user has been deleted.")
 
 # Function to handle the /stats command
-@app.on_message(filters.command("stats"))
+@pbot.on_message(filters.command("stats"))
 def stats(client, message):
     try:
         chat_id = message.chat.id
@@ -276,7 +191,7 @@ def stats(client, message):
         logger.error(traceback.format_exc())    
 
 # Function to handle incoming messages and update user data
-@app.on_message(filters.all)
+@pbot.on_message(filters.all)
 def handle_message(client, message):
     if message.from_user is None:
         # Skip messages sent by bots or channels
@@ -415,5 +330,15 @@ def start():
     asyncio.get_event_loop().run_forever()
 
 # Run the start function
-if __name__ == "__main__":
-    asyncio.run(start())
+__help__ = """
+
+ ©️ [AMBOT] (f"tg://user?id={OWNER_ID}"))
+
+*Here are the commands you can use*
+ ❍ /gethistory - Get your profile history.
+ ❍ /stats -  Get the total number of users in the database.
+ ❍ /check_username  - Get Usernames history.
+ ❍ /check_names  - check name history
+ ❍ /leaderboard -  group chat count
+"""
+__mod_name__ = "ꜱᴀɴɢᴍᴀᴛᴀ"
