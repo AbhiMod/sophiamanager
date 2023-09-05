@@ -15,7 +15,8 @@ import MukeshRobot
 from MukeshRobot import pbot as mukesh # This is bot's client
 from pyrogram import filters # pyrogram filters
 #  main   
-
+OPENAI_KEY = "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"
+openai.api_key = OPENAI_KEY
 @pbot.on_message(filters.command(["chatgpt","ai","ask"],  prefixes=["+", ".", "/", "-", "?", "$","#","&"]))
 async def chat(bot, message):
     
