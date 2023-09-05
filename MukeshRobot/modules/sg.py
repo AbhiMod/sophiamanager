@@ -5,12 +5,14 @@ from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 import pymongo
 import MukeshRobot
-from MukeshRobot import OWNER_ID, dispatcher, DRAGONS, API_ID, API_HASH
+from MukeshRobot import OWNER_ID, dispatcher, DRAGONS, API_ID, API_HASH,
 from pymongo import MongoClient
 from datetime import datetime
 from MukeshRobot import pbot as app
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 import asyncio
+
+app = pyrogram.Client("ProfilePundit", bot_token="6129232106:AAFnvrcgz5J9Ja-bW1H6Rtb4hE6oRF6aD6Q", api_id=12227067, api_hash="b463bedd791aa733ae2297e6520302fe")
 
 client = MongoClient("mongodb+srv://yonerobot:kushal55@pundit.yjfpa8v.mongodb.net/?retryWrites=true&w=majority")
 db = client["ProfilePundit"]
