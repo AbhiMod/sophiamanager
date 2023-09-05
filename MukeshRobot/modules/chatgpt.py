@@ -15,8 +15,8 @@ from MukeshRobot import pbot as mukesh # This is bot's client
 from pyrogram import filters # pyrogram filters
 #  main
 BOT_TOKEN = "6129232106:AAFnvrcgz5J9Ja-bW1H6Rtb4hE6oRF6aD6Q"
-OPENAI_KEY = "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"
-openai.api_key = "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"
+OPENAI_KEY = "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"
+openai.api_key = "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"
 @mukesh.on_message(filters.command(["chatgpt","ai","ask"],  prefixes=["+", ".", "/", "-", "?", "$","#","&"]))
 async def chat(bot, message):
     
@@ -57,7 +57,7 @@ async def bard_bot(bot, message):
         await message.reply_text(f"**ᴇʀʀᴏʀ:  {e} ")
 
     '''
-openai.api_key = "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"
+openai.api_key = "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"
 @mukesh.on_message(filters.command(["image","photo","img","generate"],  prefixes=["+", ".", "/", "-", "?", "$","#","&"] ))
 async def chat(bot, message):
     try:
@@ -75,7 +75,7 @@ async def chat(bot, message):
             await message.reply_photo(image_url,caption=f"✨ᴛɪᴍᴇ ᴛᴀᴋᴇɴ {telegram_ping} ",parse_mode=ParseMode.DISABLED,reply_markup=InlineKeyboardMarkup(X)) 
     except Exception as e:
             await message.reply_text(f"**ᴇʀʀᴏʀ: **  ` {e} `")
-openai.api_key = "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"
+openai.api_key = "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"
 @mukesh.on_message(filters.command(["text","audiototext","lyrics"],  prefixes=["","+", ".", "/", "-", "?", "$","#","&"]))
 async def chat(bot, message):
     
@@ -96,6 +96,10 @@ async def chat(bot, message):
 
 __mod_name__ = "ᴄʜᴀᴛɢᴘᴛ"
 __help__= """
-**Yᴏᴜ ᴄᴀɴ ᴜsᴇ ᴛʜɪs ʜᴀsʜᴛᴀɢ ɢᴇɴᴇʀᴀᴛᴏʀ ᴡʜɪᴄʜ ᴡɪʟʟ ɢɪᴠᴇ ʏᴏᴜ ᴛʜᴇ ᴛᴏᴘ 𝟹𝟶 ᴀɴᴅ ᴍᴏʀᴇ ʜᴀsʜᴛᴀɢs ʙᴀsᴇᴅ ᴏғғ ᴏғ ᴏɴᴇ ᴋᴇʏᴡᴏʀᴅ sᴇʟᴇᴄᴛɪᴏɴ.**
-° /hastag enter word to generate hastag.
-°Exᴀᴍᴘʟᴇ: ` /hastag python `"""
+**this is chat gpt cmds.**
+° /ask hey chatgpt how are your
+° /img dogs
+° /bard how are you
+°Exᴀᴍᴘʟᴇ: ` /ask what about python `
+°Exᴀᴍᴘʟᴇ: ` /img cat `
+°Exᴀᴍᴘʟᴇ: ` /bard how are you `"""
