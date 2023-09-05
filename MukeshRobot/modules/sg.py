@@ -5,7 +5,7 @@ from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 import pymongo
 import MukeshRobot
-from MukeshRobot import OWNER_ID, dispatcher, DRAGONS, API_ID, API_HASH, BOT_TOKEN
+from MukeshRobot import OWNER_ID, dispatcher, DRAGONS, API_ID, API_HASH
 from pymongo import MongoClient
 from datetime import datetime
 from MukeshRobot import pbot as app
