@@ -66,7 +66,7 @@ def gethistory(client, message):
         message.reply_text(response)
 
     except Exception as e:
-        app.send_message(OWNER_ID, f"An error occurred: {str(e)}")
+        client.send_message(OWNER_ID, f"An error occurred: {str(e)}")
         logger.error(f"An error occurred: {str(e)}")
         logger.error(traceback.format_exc())
 
@@ -98,7 +98,7 @@ def check_username(client, message):
         message.reply_text(response)
 
     except Exception as e:
-        app.send_message(OWNER_ID, f"An error occurred: {str(e)}")
+        client.send_message(OWNER_ID, f"An error occurred: {str(e)}")
         logger.error(f"An error occurred: {str(e)}")
         logger.error(traceback.format_exc())
 
@@ -131,7 +131,7 @@ def check_names(client, message):
         message.reply_text(response)
 
     except Exception as e:
-        app.send_message(OWNER_ID, f"An error occurred: {str(e)}")
+        client.send_message(OWNER_ID, f"An error occurred: {str(e)}")
         logger.error(f"An error occurred: {str(e)}")
         logger.error(traceback.format_exc())
 
@@ -146,12 +146,12 @@ def leaderboard_command(client, message):
         for index, user in enumerate(top_users):
             user_id = user['user_id']
             message_count = user['message_count']
-            user_mention = app.get_users(user_id).mention
+            user_mention = client.get_users(user_id).mention
             response += f"{index+1}. {user_mention} - {message_count} messages\n"
             
         message.reply_text(response)
     except Exception as e:
-        app.send_message(OWNER_ID, f"An error occurred: {str(e)}")
+        client.send_message(OWNER_ID, f"An error occurred: {str(e)}")
         logger.error(f"An error occurred: {str(e)}")
         logger.error(traceback.format_exc())
 
@@ -185,7 +185,7 @@ def stats(client, message):
         message_text += f"Number of connected users: {num_users}\nNumber of name changes recorded: {num_changes}"
         client.send_message(chat_id=chat_id, text=message_text)
     except Exception as e:
-        app.send_message(OWNER_ID, f"An error occurred: {str(e)}")
+        client.send_message(OWNER_ID, f"An error occurred: {str(e)}")
         logger.error(f"An error occurred: {str(e)}")
         logger.error(traceback.format_exc())    
 
@@ -222,7 +222,7 @@ def handle_message(client, message):
                 users.replace_one({"user_id": user_id}, user_data)
                 print(f"username updated {user_id}")
     except Exception as e:
-        app.send_message(OWNER_ID, f"An error occurred: {str(e)}")
+        client.send_message(OWNER_ID, f"An error occurred: {str(e)}")
         logger.error(f"An error occurred: {str(e)}")
         logger.error(traceback.format_exc())
 
@@ -244,17 +244,17 @@ def store_group(client, message):
             # Check if the group title has changed
             if group_data["title"] != chat_title:
                 groups.update_one({"group_id": chat_id}, {"$set": {"title": chat_title}})
-                app.send_message(chat_id=chat_id, text=f"The group title has been updated to: {chat_title}")
+                client.send_message(chat_id=chat_id, text=f"The group title has been updated to: {chat_title}")
         else:
             # Add the group to the database
             group_data = {"group_id": chat_id, "title": chat_title, "last_active": datetime.now()}
             success_add = groups.insert_one(group_data)
             if success_add.acknowledged:
-                app.send_message(chat_id=chat_id, text=f"Thank you for adding me to {chat_title}!")
+                client.send_message(chat_id=chat_id, text=f"Thank you for adding me to {chat_title}!")
                 
     except Exception as e:
         error_msg = f"An error occurred: {str(e)}"
-        app.send_message(OWNER_ID, error_msg)
+        client.send_message(OWNER_ID, error_msg)
         logger.error(error_msg)
         logger.error(traceback.format_exc())
 
@@ -288,7 +288,7 @@ async def check_groups():
         for group in groups.find():
             group_id = group["group_id"]
             print(f"started syncing for chat {group_id}")
-            app.send_message(f"started syncing for chat {group_id}")
+            client.send_message(f"started syncing for chat {group_id}")
             async for member in app.get_chat_members(chat_id=group_id):
                 user_id = member.user.id
                 user_data = users.find_one({"user_id": user_id})
@@ -313,7 +313,7 @@ async def check_groups():
                         users.replace_one({"user_id": user_id}, user_data)
                         print(f"username updated {user_id}")
     except Exception as e:
-        await app.send_message(OWNER_ID, f"An error occurred: {str(e)}")
+        await client.send_message(OWNER_ID, f"An error occurred: {str(e)}")
         logger.error(f"An error occurred: {str(e)}")
         logger.error(traceback.format_exc())
 
@@ -322,8 +322,10 @@ async def check_groups():
 __help__ = """
 
 /gethistory - Get your profile history.
- /stats -  Get the total number of users in the database.
- /check_username  - Get Usernames history.
- /check_names  - check name history
- /leaderboard -  group chat count"""
+/stats -  Get the total number of users in the database.
+/check_username  - Get Usernames history.
+/check_names  - check name history
+/check_names  - check name history
+/deletehistory  - delete history Data
+/leaderboard -  group chat count"""
 __mod_name__ = "Sᴀɴɢᴍᴀᴛᴀ"
