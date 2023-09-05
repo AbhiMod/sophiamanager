@@ -330,4 +330,4 @@ __help__ = """
  ❍ /check_names  - check name history
  ❍ /leaderboard -  group chat count
 """
-__mod_name__ = "ꜱᴀɴɢᴍᴀᴛᴀ"
+__mod_name__ = "Sᴀɴɢᴍᴀᴛᴀ"
