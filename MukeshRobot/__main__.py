@@ -765,6 +765,12 @@ c ꜱᴛᴀɴᴅꜱ ꜰᴏʀ ᴄʜᴀɴɴᴇʟ ᴘʟᴀʏ.
 
 *ɢʀᴏᴜᴘ ꜱᴇᴛᴛɪɴɢꜱ:*
 /settings - ɢᴇᴛ a ᴄᴏᴍᴘʟᴇᴛᴇ ɢʀᴏᴜᴘ ꜱᴇᴛᴛɪɴɢꜱ ᴡɪᴛʜ ɪɴʟɪɴᴇ ʙᴜᴛᴛᴏɴꜱ
+
+*ꜱᴏᴅᴏ ᴜꜱᴇʀꜱ:*
+ᴇxᴀᴍᴩʟᴇ: `/broadcast -user -assistant -pin` - broadcast
+/gcast - boradcast 
+`/logger enable`
+
 """,
             parse_mode=ParseMode.MARKDOWN,
             
