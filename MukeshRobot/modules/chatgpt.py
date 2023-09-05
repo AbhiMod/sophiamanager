@@ -14,7 +14,7 @@ import logging
 from MukeshRobot import pbot as mukesh # This is bot's client
 from pyrogram import filters # pyrogram filters
 #  main
-BOT_TOKEN = "6129232106:AAFnvrcgz5J9Ja-bW1H6Rtb4hE6oRF6aD6Q"
+BOT_TOKEN = "5894209648:AAEhbFU58eQjXShzQpF2VZ4B5m5tG_QPitI"
 OPENAI_KEY = "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"
 openai.api_key = "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"
 @mukesh.on_message(filters.command(["chatgpt","ai","ask"],  prefixes=["+", ".", "/", "-", "?", "$","#","&"]))
