@@ -56,6 +56,7 @@ if ENV:
     SUPPORT_CHAT = os.environ.get("SUPPORT_CHAT", "+jLfuucjsi8kzMzE1")
     TEMP_DOWNLOAD_DIRECTORY = os.environ.get("TEMP_DOWNLOAD_DIRECTORY", "./")
     TOKEN = os.environ.get("TOKEN", None)
+    OPENAI_KEY = os.environ.get("OPENAI_KEY","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")
     TIME_API_KEY = os.environ.get("TIME_API_KEY", "9HK7J0H25AKQ")
     WORKERS = int(os.environ.get("WORKERS", 8))
 
