@@ -319,9 +319,6 @@ async def check_groups():
 
 
 
-scheduler = AsyncIOScheduler()
-scheduler.add_job(check_groups, "interval", hours=1)
-
 __help__ = """
 
  ©️ [AMBOT] (f"tg://user?id={OWNER_ID}"))
