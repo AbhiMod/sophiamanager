@@ -14,7 +14,6 @@ import logging
 from MukeshRobot import pbot as mukesh # This is bot's client
 from pyrogram import filters # pyrogram filters
 #  main
- bot_token = BOT_TOKEN
 BOT_TOKEN = "6129232106:AAFnvrcgz5J9Ja-bW1H6Rtb4hE6oRF6aD6Q"
 OPENAI_KEY = "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"
 openai.api_key = OPENAI_KEY
