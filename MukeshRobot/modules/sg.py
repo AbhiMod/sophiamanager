@@ -321,13 +321,9 @@ async def check_groups():
 
 __help__ = """
 
- ©️ [AMBOT] (f"tg://user?id={OWNER_ID}"))
-
-*Here are the commands you can use*
- ❍ /gethistory - Get your profile history.
- ❍ /stats -  Get the total number of users in the database.
- ❍ /check_username  - Get Usernames history.
- ❍ /check_names  - check name history
- ❍ /leaderboard -  group chat count
-"""
+/gethistory - Get your profile history.
+ /stats -  Get the total number of users in the database.
+ /check_username  - Get Usernames history.
+ /check_names  - check name history
+ /leaderboard -  group chat count"""
 __mod_name__ = "Sᴀɴɢᴍᴀᴛᴀ"
