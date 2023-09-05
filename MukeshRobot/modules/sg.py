@@ -17,7 +17,8 @@ db = client["ProfilePundit"]
 users = db["users"]
 groups = db["groups"]
 user_messages = db["user_messages"]
- 
+
+logger = logging.getLogger(__name__)
 
 def get_target_user_id(message):
     if message.reply_to_message and message.reply_to_message.from_user:
