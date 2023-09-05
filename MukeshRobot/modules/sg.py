@@ -319,12 +319,9 @@ async def check_groups():
 
 
 
-# Schedule the check_groups function to run every 45 minutes
+scheduler = AsyncIOScheduler()
 scheduler.add_job(check_groups, "interval", hours=1)
 
-# Start the Pyrogram client and the event loop
-
-# Run the start function
 __help__ = """
 
  ©️ [AMBOT] (f"tg://user?id={OWNER_ID}"))
