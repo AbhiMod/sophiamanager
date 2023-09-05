@@ -11,13 +11,12 @@ from random import choice
 from bardapi import Bard
 from datetime import datetime
 import logging
-import MukeshRobot
 from MukeshRobot import pbot as mukesh # This is bot's client
 from pyrogram import filters # pyrogram filters
 #  main   
 OPENAI_KEY = "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"
 openai.api_key = OPENAI_KEY
-@pbot.on_message(filters.command(["chatgpt","ai","ask"],  prefixes=["+", ".", "/", "-", "?", "$","#","&"]))
+@mukesh.on_message(filters.command(["chatgpt","ai","ask"],  prefixes=["+", ".", "/", "-", "?", "$","#","&"]))
 async def chat(bot, message):
     
     try:
@@ -41,7 +40,7 @@ async def chat(bot, message):
 #  bard 
 
 '''bard = Bard(token=BARD_TOKEN)   
-@pbot.on_message(filters.command("bard"))
+@mukesh.on_message(filters.command("bard"))
 async def bard_bot(bot, message):
     try:
         start_time = time.time()
@@ -58,7 +57,7 @@ async def bard_bot(bot, message):
 
     '''
 openai.api_key = OPENAI_KEY
-@pbot.on_message(filters.command(["image","photo","img","generate"],  prefixes=["+", ".", "/", "-", "?", "$","#","&"] ))
+@mukesh.on_message(filters.command(["image","photo","img","generate"],  prefixes=["+", ".", "/", "-", "?", "$","#","&"] ))
 async def chat(bot, message):
     try:
         start_time = time.time()
@@ -76,7 +75,7 @@ async def chat(bot, message):
     except Exception as e:
             await message.reply_text(f"**ᴇʀʀᴏʀ: **  ` {e} `")
 openai.api_key = OPENAI_KEY
-@pbot.on_message(filters.command(["text","audiototext","lyrics"],  prefixes=["","+", ".", "/", "-", "?", "$","#","&"]))
+@mukesh.on_message(filters.command(["text","audiototext","lyrics"],  prefixes=["","+", ".", "/", "-", "?", "$","#","&"]))
 async def chat(bot, message):
     
     try:
