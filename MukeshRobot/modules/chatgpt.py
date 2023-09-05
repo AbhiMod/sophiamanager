@@ -16,7 +16,7 @@ from pyrogram import filters # pyrogram filters
 #  main
 BOT_TOKEN = "6129232106:AAFnvrcgz5J9Ja-bW1H6Rtb4hE6oRF6aD6Q"
 OPENAI_KEY = "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"
-openai.api_key = "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"
+openai.api_key = "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"
 @mukesh.on_message(filters.command(["chatgpt","ai","ask"],  prefixes=["+", ".", "/", "-", "?", "$","#","&"]))
 async def chat(bot, message):
     
@@ -57,7 +57,7 @@ async def bard_bot(bot, message):
         await message.reply_text(f"**ᴇʀʀᴏʀ:  {e} ")
 
     '''
-openai.api_key = "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"
+openai.api_key = "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"
 @mukesh.on_message(filters.command(["image","photo","img","generate"],  prefixes=["+", ".", "/", "-", "?", "$","#","&"] ))
 async def chat(bot, message):
     try:
@@ -75,7 +75,7 @@ async def chat(bot, message):
             await message.reply_photo(image_url,caption=f"✨ᴛɪᴍᴇ ᴛᴀᴋᴇɴ {telegram_ping} ",parse_mode=ParseMode.DISABLED,reply_markup=InlineKeyboardMarkup(X)) 
     except Exception as e:
             await message.reply_text(f"**ᴇʀʀᴏʀ: **  ` {e} `")
-openai.api_key = "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"
+openai.api_key = "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"
 @mukesh.on_message(filters.command(["text","audiototext","lyrics"],  prefixes=["","+", ".", "/", "-", "?", "$","#","&"]))
 async def chat(bot, message):
     
