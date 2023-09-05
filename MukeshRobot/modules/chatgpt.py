@@ -6,7 +6,6 @@ from pyrogram.enums import ChatAction, ParseMode
 import openai
 from pyrogram.types import CallbackQuery
 from config import *
-from MukeshRobot import OPENAI_KEY,
 import os,sys,re,requests
 import asyncio,time
 from random import choice
