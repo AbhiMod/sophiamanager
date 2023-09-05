@@ -7,6 +7,7 @@ import openai
 from pyrogram.types import CallbackQuery
 import os,sys,re,requests
 import asyncio,time
+from MukeshRobot import *
 from random import choice
 from bardapi import Bard
 from datetime import datetime
@@ -14,8 +15,7 @@ import logging
 from MukeshRobot import pbot as mukesh # This is bot's client
 from pyrogram import filters # pyrogram filters
 #  main
-OPENAI_KEY = "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"
-openai.api_key = "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"
+openai.api_key = OPENAI_KEY
 @mukesh.on_message(filters.command(["chatgpt","ai","ask"],  prefixes=["+", ".", "/", "-", "?", "$","#","&"]))
 async def chat(bot, message):
     
@@ -56,7 +56,7 @@ async def bard_bot(bot, message):
         await message.reply_text(f"**ᴇʀʀᴏʀ:  {e} ")
 
     '''
-openai.api_key = "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"
+openai.api_key = 
 @mukesh.on_message(filters.command(["image","photo","img","generate"],  prefixes=["+", ".", "/", "-", "?", "$","#","&"] ))
 async def chat(bot, message):
     try:
@@ -74,7 +74,7 @@ async def chat(bot, message):
             await message.reply_photo(image_url,caption=f"✨ᴛɪᴍᴇ ᴛᴀᴋᴇɴ {telegram_ping} ",parse_mode=ParseMode.DISABLED,reply_markup=InlineKeyboardMarkup(X)) 
     except Exception as e:
             await message.reply_text(f"**ᴇʀʀᴏʀ: **  ` {e} `")
-openai.api_key = "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"
+openai.api_key = 
 @mukesh.on_message(filters.command(["text","audiototext","lyrics"],  prefixes=["","+", ".", "/", "-", "?", "$","#","&"]))
 async def chat(bot, message):
     
