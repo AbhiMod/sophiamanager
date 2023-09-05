@@ -1,8 +1,8 @@
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
-from Am import OWNER_ID
-from Am import pbot as bot
+from MukeshRobot import OWNER_ID
+from MukeshRobot import pbot as bot
 
 
 @bot.on_message(filters.private & filters.incoming)
