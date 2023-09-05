@@ -4,11 +4,12 @@ aiofiles==23.2.1
 aiohttp==3.8.5
 apscheduler==3.6.3
 asyncio==3.4.3
+pytz
+DateTime
 beautifulsoup4==4.12.2
 bing_image_downloader==1.1.2
 bleach==6.0.0
 bs4==0.0.1
-datetime
 cachetools==4.2.2
 cloudscraper==1.2.71
 countryinfo==0.1.2
