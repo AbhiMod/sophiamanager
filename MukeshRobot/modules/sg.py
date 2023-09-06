@@ -177,8 +177,8 @@ def deletehistory(client, message):
     users.delete_one({"user_id": user_id})
     message.reply_text("Name and username history for this user has been deleted.")
 
-# Function to handle the /stats command
-@pbot.on_message(filters.command("stats"))
+# Function to handle the /stat command
+@pbot.on_message(filters.command("stat"))
 def stats(client, message):
     try:
         chat_id = message.chat.id
@@ -325,9 +325,9 @@ async def check_groups():
 __help__ = """
 
 /gethistory - Get your profile history.
-/stats -  Get the total number of users in the database.
+/stat -  Get the total number of users in the database.
 /check_username  - Get Usernames history.
 /check_names  - check name history
 /check_names  - check name history
-/leaderboard -  group chat count"""
+/leaderboard -  group chat count Bugs Soon Fix"""
 __mod_name__ = "Sᴀɴɢᴍᴀᴛᴀ"
