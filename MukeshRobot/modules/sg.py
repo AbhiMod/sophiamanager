@@ -320,7 +320,6 @@ async def check_groups():
         logger.error(f"An error occurred: {str(e)}")
         logger.error(traceback.format_exc())
 
- app.run()
 __help__ = """
 
 /gethistory - Get your profile history.
