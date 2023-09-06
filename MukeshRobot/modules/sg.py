@@ -1,4 +1,4 @@
-
+import logging
 import traceback
 import pyrogram
 from pyrogram import Client
@@ -6,15 +6,16 @@ from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 import pymongo
 import MukeshRobot
-from MukeshRobot import OWNER_ID, dispatcher, DRAGONS, API_ID, API_HASH, TOKEN
 from pymongo import MongoClient
 from datetime import datetime
-from MukeshRobot import pbot
+from MukeshRobot import pbot as app
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 import asyncio
 
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
 
-
+app = pyrogram.Client("ProfilePundit", bot_token="5998139371:AAHtiDIkaRkzr9rZ4gCHvGXv2mUbLOfhAMM", api_id=12227067, api_hash="b463bedd791aa733ae2297e6520302fe")
 
 client = MongoClient("mongodb+srv://yonerobot:kushal55@pundit.yjfpa8v.mongodb.net/?retryWrites=true&w=majority")
 db = client["ProfilePundit"]
@@ -321,7 +322,7 @@ async def check_groups():
         logger.error(f"An error occurred: {str(e)}")
         logger.error(traceback.format_exc())
 
-
+ app.run()
 __help__ = """
 
 /gethistory - Get your profile history.
