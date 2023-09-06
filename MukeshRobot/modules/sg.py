@@ -1,6 +1,7 @@
 import logging
 import traceback
 import pyrogram
+from pyrogram import Client
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 import pymongo
