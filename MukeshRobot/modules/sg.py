@@ -38,7 +38,7 @@ def get_target_user_id(message):
     return None
     
 # Function to get name and username history for a user
-@pbot.on_message(filters.command("gethistory"))
+@app.on_message(filters.command("gethistory"))
 def gethistory(client, message):
     try:
         user_id = get_target_user_id(message)
@@ -75,7 +75,7 @@ def gethistory(client, message):
 
 
 # Function to get username history for a user
-@pbot.on_message(filters.command("check_username"))
+@app.on_message(filters.command("check_username"))
 def check_username(client, message):
     try:
         user_id = get_target_user_id(message)
@@ -108,7 +108,7 @@ def check_username(client, message):
 
 
 # Function to get name history for a user
-@pbot.on_message(filters.command("check_names"))
+@app.on_message(filters.command("check_names"))
 def check_names(client, message):
     try:
         user_id = get_target_user_id(message)
@@ -139,7 +139,7 @@ def check_names(client, message):
         logger.error(traceback.format_exc())
 
 
-@pbot.on_message(filters.command("leaderboard") & filters.group)
+@app.on_message(filters.command("leaderboard") & filters.group)
 def leaderboard_command(client, message):
     try:
         group_id = message.chat.id
@@ -161,7 +161,7 @@ def leaderboard_command(client, message):
 
 
 # Function to delete name and username history for a user
-@pbot.on_message(filters.command("deletehistory") & filters.user(OWNER_ID))
+@app.on_message(filters.command("deletehistory") & filters.user(OWNER_ID))
 def deletehistory(client, message):
     user_id = get_target_user_id(message)
     if not user_id:
@@ -177,7 +177,7 @@ def deletehistory(client, message):
     message.reply_text("Name and username history for this user has been deleted.")
 
 # Function to handle the /stat command
-@pbot.on_message(filters.command("stat"))
+@app.on_message(filters.command("stat"))
 def stats(client, message):
     try:
         chat_id = message.chat.id
@@ -193,7 +193,7 @@ def stats(client, message):
         logger.error(traceback.format_exc())    
 
 # Function to handle incoming messages and update user data
-@pbot.on_message(filters.all)
+@app.on_message(filters.all)
 def handle_message(client, message):
     if message.from_user is None:
         # Skip messages sent by bots or channels
