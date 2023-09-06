@@ -13,10 +13,11 @@ from MukeshRobot import pbot as app
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 import asyncio
 
+
 app = Client(
     "ProfilePundit",
-    api_id= int({API_ID}),  # Replace with your API ID
-    api_hash={API_HASH},  # Replace with your API Hash
+    api_id=12227067,  # Replace with your API ID
+    api_hash="b463bedd791aa733ae2297e6520302fe",  # Replace with your API Hash
     bot_token={TOKEN}  # Replace with your bot token
 )
 
