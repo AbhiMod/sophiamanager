@@ -1,4 +1,4 @@
-import logging
+
 import traceback
 import pyrogram
 from pyrogram import Client
@@ -9,26 +9,18 @@ import MukeshRobot
 from MukeshRobot import OWNER_ID, dispatcher, DRAGONS, API_ID, API_HASH, TOKEN
 from pymongo import MongoClient
 from datetime import datetime
-from MukeshRobot import pbot as app
+from MukeshRobot import pbot
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 import asyncio
 
 
-app = Client(
-    "ProfilePundit",
-    api_id=12227067,  # Replace with your API ID
-    api_hash="b463bedd791aa733ae2297e6520302fe",  # Replace with your API Hash
-    bot_token={TOKEN}  # Replace with your bot token
-)
+
 
 client = MongoClient("mongodb+srv://yonerobot:kushal55@pundit.yjfpa8v.mongodb.net/?retryWrites=true&w=majority")
 db = client["ProfilePundit"]
 users = db["users"]
 groups = db["groups"]
 user_messages = db["user_messages"]
-
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.INFO)
 
 def get_target_user_id(message):
     if message.reply_to_message and message.reply_to_message.from_user:
@@ -47,7 +39,7 @@ def get_target_user_id(message):
     return None
     
 # Function to get name and username history for a user
-@app.on_message(filters.command("gethistory"))
+@pbot.on_message(filters.command("gethistory"))
 def gethistory(client, message):
     try:
         user_id = get_target_user_id(message)
@@ -84,7 +76,7 @@ def gethistory(client, message):
 
 
 # Function to get username history for a user
-@app.on_message(filters.command("check_username"))
+@pbot.on_message(filters.command("check_username"))
 def check_username(client, message):
     try:
         user_id = get_target_user_id(message)
@@ -117,7 +109,7 @@ def check_username(client, message):
 
 
 # Function to get name history for a user
-@app.on_message(filters.command("check_names"))
+@pbot.on_message(filters.command("check_names"))
 def check_names(client, message):
     try:
         user_id = get_target_user_id(message)
@@ -148,7 +140,7 @@ def check_names(client, message):
         logger.error(traceback.format_exc())
 
 
-@app.on_message(filters.command("leaderboard") & filters.group)
+@pbot.on_message(filters.command("leaderboard") & filters.group)
 def leaderboard_command(client, message):
     try:
         group_id = message.chat.id
@@ -170,7 +162,7 @@ def leaderboard_command(client, message):
 
 
 # Function to delete name and username history for a user
-@app.on_message(filters.command("deletehistory") & filters.user(OWNER_ID))
+@pbot.on_message(filters.command("deletehistory") & filters.user(OWNER_ID))
 def deletehistory(client, message):
     user_id = get_target_user_id(message)
     if not user_id:
@@ -186,7 +178,7 @@ def deletehistory(client, message):
     message.reply_text("Name and username history for this user has been deleted.")
 
 # Function to handle the /stats command
-@app.on_message(filters.command("stats"))
+@pbot.on_message(filters.command("stats"))
 def stats(client, message):
     try:
         chat_id = message.chat.id
@@ -202,7 +194,7 @@ def stats(client, message):
         logger.error(traceback.format_exc())    
 
 # Function to handle incoming messages and update user data
-@app.on_message(filters.all)
+@pbot.on_message(filters.all)
 def handle_message(client, message):
     if message.from_user is None:
         # Skip messages sent by bots or channels
