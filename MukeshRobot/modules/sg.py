@@ -12,8 +12,6 @@ from MukeshRobot import pbot as app
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 import asyncio
 
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.INFO)
 
 app = pyrogram.Client("ProfilePundit", bot_token="5998139371:AAHtiDIkaRkzr9rZ4gCHvGXv2mUbLOfhAMM", api_id=12227067, api_hash="b463bedd791aa733ae2297e6520302fe")
 
