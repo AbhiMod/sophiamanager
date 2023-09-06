@@ -6,15 +6,13 @@ from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 import pymongo
 import MukeshRobot
-from MukeshRobot import OWNER_ID, API_ID, API_HASH
 from pymongo import MongoClient
 from datetime import datetime
 from MukeshRobot import pbot as app
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 import asyncio
 
-
-app = pyrogram.Client("ProfilePundit", bot_token="5998139371:AAHtiDIkaRkzr9rZ4gCHvGXv2mUbLOfhAMM", api_id=12227067, api_hash="b463bedd791aa733ae2297e6520302fe")
+user_id = message.from_user.id
 
 client = MongoClient("mongodb+srv://yonerobot:kushal55@pundit.yjfpa8v.mongodb.net/?retryWrites=true&w=majority")
 db = client["ProfilePundit"]
@@ -70,7 +68,7 @@ def gethistory(client, message):
         message.reply_text(response)
 
     except Exception as e:
-        app.send_message(OWNER_ID, f"An error occurred: {str(e)}")
+        app.send_message(user_id, f"An error occurred: {str(e)}")
         logger.error(f"An error occurred: {str(e)}")
         logger.error(traceback.format_exc())
 
@@ -102,7 +100,7 @@ def check_username(client, message):
         message.reply_text(response)
 
     except Exception as e:
-        app.send_message(OWNER_ID, f"An error occurred: {str(e)}")
+        app.send_message(user_id, f"An error occurred: {str(e)}")
         logger.error(f"An error occurred: {str(e)}")
         logger.error(traceback.format_exc())
 
@@ -135,7 +133,7 @@ def check_names(client, message):
         message.reply_text(response)
 
     except Exception as e:
-        app.send_message(OWNER_ID, f"An error occurred: {str(e)}")
+        app.send_message(user_id, f"An error occurred: {str(e)}")
         logger.error(f"An error occurred: {str(e)}")
         logger.error(traceback.format_exc())
 
@@ -155,14 +153,14 @@ def leaderboard_command(client, message):
             
         message.reply_text(response)
     except Exception as e:
-        app.send_message(OWNER_ID, f"An error occurred: {str(e)}")
+        app.send_message(user_id, f"An error occurred: {str(e)}")
         logger.error(f"An error occurred: {str(e)}")
         logger.error(traceback.format_exc())
 
 
 
 # Function to delete name and username history for a user
-@app.on_message(filters.command("deletehistory") & filters.user(OWNER_ID))
+@app.on_message(filters.command("deletehistory") & filters.user(user_id))
 def deletehistory(client, message):
     user_id = get_target_user_id(message)
     if not user_id:
@@ -189,7 +187,7 @@ def stats(client, message):
         message_text += f"Number of connected users: {num_users}\nNumber of name changes recorded: {num_changes}"
         client.send_message(chat_id=chat_id, text=message_text)
     except Exception as e:
-        app.send_message(OWNER_ID, f"An error occurred: {str(e)}")
+        app.send_message(user_id, f"An error occurred: {str(e)}")
         logger.error(f"An error occurred: {str(e)}")
         logger.error(traceback.format_exc())    
 
@@ -226,7 +224,7 @@ def handle_message(client, message):
                 users.replace_one({"user_id": user_id}, user_data)
                 print(f"username updated {user_id}")
     except Exception as e:
-        app.send_message(OWNER_ID, f"An error occurred: {str(e)}")
+        app.send_message(user_id, f"An error occurred: {str(e)}")
         logger.error(f"An error occurred: {str(e)}")
         logger.error(traceback.format_exc())
 
@@ -258,7 +256,7 @@ def store_group(client, message):
                 
     except Exception as e:
         error_msg = f"An error occurred: {str(e)}"
-        app.send_message(OWNER_ID, error_msg)
+        app.send_message(user_id, error_msg)
         logger.error(error_msg)
         logger.error(traceback.format_exc())
 
@@ -317,7 +315,7 @@ async def check_groups():
                         users.replace_one({"user_id": user_id}, user_data)
                         print(f"username updated {user_id}")
     except Exception as e:
-        await app.send_message(OWNER_ID, f"An error occurred: {str(e)}")
+        await app.send_message(user_id, f"An error occurred: {str(e)}")
         logger.error(f"An error occurred: {str(e)}")
         logger.error(traceback.format_exc())
 
