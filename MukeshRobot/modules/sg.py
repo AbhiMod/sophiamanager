@@ -15,7 +15,7 @@ import asyncio
 
 app = Client(
     "ProfilePundit",
-    api_id= {API_ID},  # Replace with your API ID
+    api_id= int({API_ID}),  # Replace with your API ID
     api_hash={API_HASH},  # Replace with your API Hash
     bot_token={TOKEN}  # Replace with your bot token
 )
