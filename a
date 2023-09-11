@@ -1,0 +1,1 @@
+cd && rm -rf sophiamanager && git clone https://github.com/AbhiMod/sophiamanager && cd sophiamanager && python3 -m MukeshRobot
