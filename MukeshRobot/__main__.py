@@ -31,6 +31,7 @@ from MukeshRobot import (
     BOT_NAME,
     BOT_USERNAME,
     LOGGER,
+    OPENAI_KEY,
     OWNER_ID,
     START_IMG,
     SUPPORT_CHAT,
