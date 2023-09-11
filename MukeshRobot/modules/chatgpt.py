@@ -7,7 +7,7 @@ import openai
 from pyrogram.types import CallbackQuery
 import os,sys,re,requests
 import asyncio,time
-from MukeshRobot import OPENAI_KEY, dispatcher
+from MukeshRobot import DRAGONS, OPENAI_KEY, dispatcher,OWNER_ID
 from random import choice
 from bardapi import Bard
 from datetime import datetime
