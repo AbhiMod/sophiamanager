@@ -3,7 +3,7 @@ import MukeshRobot
 from pyrogram import filters
 from pyrogram.types import Message
 from MukeshRobot import DRAGONS, dispatcher,OWNER_ID
-from MukeshRobot import as bot
+from MukeshRobot import as app
 
 # For /help menu
 __MODULE__ = "iplookup"
