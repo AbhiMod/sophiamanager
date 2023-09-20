@@ -4,42 +4,104 @@ from pyrogram import filters
 from pyrogram.types import Message
 from MukeshRobot import DRAGONS, dispatcher,OWNER_ID,pbot
 
-# For /help menu
-__mod_name__ = "Ip-lookup"
-__help__ = """
-──「  Free Tools 」──
+from re import MULTILINE as RE_MULTILINE
 
-/iplookup [ip address] to get the details about that ip
-"""
+from pyrogram import filters
+from pyrogram.enums import ChatMemberStatus, ParseMode
+from pyrogram.types import (
+    InlineKeyboardButton,
+    InlineKeyboardMarkup,
+    InputMediaPhoto,
+    InputMediaVideo,
+    Message,
+)
+
+from MukeshRobot.utils.errors import capture_err
+
+# NOTE: THIS MODULE IS SPECIFICALLY FOR @PatheticRice GROUP, YOU CAN REMOVE IT IN YOUR FORK IF YOU WANT TO
+
+RICE_GROUP = "AM_YTSUPPORT"
+RICE_CHANNEL = "AMBOTYT"
 
 
-@pbot.on_message(filters.command("iplookup"))
-async def ip_lookup(_, message: Message):
-    if len(message.command) < 2:
-        return await message.reply_text("ip address is missing")
-    ip_address = message.command[1]
-    msg = await message.reply_text("checking ip address...")
-    try:
-        res = await http.get(f"https://ipinfo.io/{ip_address}/json", timeout=5)
-    except asyncio.TimeoutError:
-        return await message.reply_text("request timeout")
-    except Exception as e:
-        return await message.reply_text(f"ERROR: `{e}`")
-    hostname = res.get("hostname", "N/A")
-    city = res.get("city", "N/A")
-    region = res.get("region", "N/A")
-    country = res.get("country", "N/A")
-    location = res.get("loc", "N/A")
-    org = res.get("org", "N/A")
-    await msg.edit(
-        (
-            f"**Details of `{ip_address}`**\n\n"
-            f"HostName: `{hostname}`\n"
-            f"City: `{city}`\n"
-            f"Region: `{region}`\n"
-            f"Country: `{country}`\n"
-            f"Org: `{org}`\n"
-            f"Map: https://www.google.fr/maps?q={location}\n"
+@pbot.on_message(
+    filters.chat(RICE_GROUP)
+    & (filters.photo | filters.video | filters.document)
+    & filters.regex(r"^\[RICE\]", RE_MULTILINE)
+    & ~filters.forwarded
+)
+@capture_err
+async def rice(_, message: Message):
+    """Forward media and media_group messages which has caption starts
+    with [RICE] with space and description in RICE_GROUP to RICE_CHANNEL
+    edited or forwarded messages won't be forwarded
+    """
+    await message.reply_text(
+        "**Waiting for admin to approve...**",
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton("Approve (Forward)", callback_data="forward"),
+                    InlineKeyboardButton("Ignore", callback_data="ignore"),
+                ]
+            ]
         ),
-        disable_web_page_preview=True,
+        quote=True,
+        parse_mode=ParseMode.MARKDOWN,
     )
+
+
+@pbot.on_callback_query(filters.regex("forward"))
+async def callback_query_forward_rice(_, callback_query):
+    app.set_parse_mode("markdown")
+    u_approver = callback_query.from_user
+    c_group = callback_query.message.chat
+    approver_status = (await c_group.get_member(u_approver.id)).status
+    if not approver_status in (ChatMemberStatus.ADMINISTRATOR, ChatMemberStatus.OWNER):
+        await callback_query.answer("Only admin can approve this!")
+        return
+    await callback_query.answer("Successfully approved")
+    m_op = callback_query.message.reply_to_message
+    u_op = m_op.from_user
+    arg_caption = f"{m_op.caption}\nOP: [{u_op.first_name}]({m_op.link})"
+    if m_op.media_group_id:
+        message_id = m_op.id
+        media_group = await app.get_media_group(RICE_GROUP, message_id)
+        arg_media = []
+        for m in media_group:
+            if m.photo and m.caption:
+                arg_media.append(InputMediaPhoto(m.photo.file_id, caption=arg_caption))
+            elif m.photo:
+                arg_media.append(InputMediaPhoto(m.photo.file_id))
+            elif m.video and m.caption:
+                arg_media.append(InputMediaVideo(m.video.file_id, caption=arg_caption))
+            elif m.video:
+                arg_media.append(InputMediaVideo(m.video.file_id))
+        m_cp = await app.send_media_group(RICE_CHANNEL, arg_media)
+        link = m_cp[0].link
+    else:
+        m_cp = await m_op.copy(RICE_CHANNEL, caption=arg_caption)
+        link = m_cp.link
+    await callback_query.message.delete()
+    reply_text = (
+        f"**OP**: {u_op.mention()}\n"
+        f"**Approver**: {u_approver.mention()}\n"
+        f"**Forwarded**: [Rice Gallery]({link})"
+    )
+    await m_op.reply_text(reply_text, disable_web_page_preview=True)
+
+
+@pbot.on_callback_query(filters.regex("ignore"))
+async def callback_query_ignore_rice(_, callback_query):
+    c_group = callback_query.message.chat
+    u_disprover = callback_query.from_user
+    disprover_status = (await c_group.get_member(u_disprover.id)).status
+    m_op = callback_query.message.reply_to_message
+    u_op = m_op.from_user
+    if u_disprover.id == u_op.id:
+        await callback_query.answer("Ok, this rice won't be forwarded")
+    elif disprover_status in [ChatMemberStatus.ADMINISTRATOR, ChatMemberStatus.OWNER]:
+        await m_op.reply_text(f"{u_disprover.mention} ignored this rice")
+    else:
+        return await callback_query.answer("Only admin or OP could ignore it")
+    await callback_query.message.delete()
