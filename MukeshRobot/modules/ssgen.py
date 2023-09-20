@@ -22,9 +22,24 @@ from telethon.errors import (
 )
 from telethon.sessions import StringSession
 
-from misskaty import app
-from misskaty.core.misskaty_patch.listen.listen import ListenerTimeout
-from misskaty.vars import API_HASH, API_ID, COMMAND_HANDLER
+from MukeshRobot.core.misskaty_patch.listen.listen import ListenerTimeout
+from MukeshRobot import (
+    DEMONS,
+    DEV_USERS,
+     API_HASH,
+    API_ID,
+    DRAGONS,
+    EVENT_LOGS,
+   JOIN_LOGGER,
+    OWNER_ID,
+    STRICT_GBAN,
+    SUPPORT_CHAT,
+    TIGERS,
+    WOLVES,
+    dispatcher,
+)
+from MukeshRobot import BOT_USERNAME,BOT_NAME, SUPPORT_CHAT, telethn
+from MukeshRobot import pbot as app
 
 LOGGER = getLogger("MissKaty")
 
@@ -37,11 +52,11 @@ __HELP__ = """
 ask_ques = "**» Please choose the library for which you want generate string :**\n\nNote: I'm not collecting any personal info from this feature, you can deploy own bot if you want."
 buttons_ques = [
     [
-        InlineKeyboardButton("Pyrogram", callback_data="pyrogram"),
+        InlineKeyboardButton("PyrogramV2", callback_data="pyrogram"),
         InlineKeyboardButton("Telethon", callback_data="telethon"),
     ],
     [
-        InlineKeyboardButton("Pyrogram Bot", callback_data="pyrogram_bot"),
+        InlineKeyboardButton("PyrogramV2 Bot", callback_data="pyrogram_bot"),
         InlineKeyboardButton("Telethon Bot", callback_data="telethon_bot"),
     ],
 ]
