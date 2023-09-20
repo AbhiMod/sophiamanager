@@ -2,8 +2,7 @@ import asyncio
 import MukeshRobot
 from pyrogram import filters
 from pyrogram.types import Message
-from MukeshRobot import DRAGONS, dispatcher,OWNER_ID
-from MukeshRobot import as app
+from MukeshRobot import DRAGONS, dispatcher,OWNER_ID,pbot
 
 # For /help menu
 __MODULE__ = "iplookup"
@@ -12,7 +11,7 @@ __HELP__ = """
 """
 
 
-@app.on_message(filters.command("iplookup"))
+@pbot.on_message(filters.command("iplookup"))
 async def ip_lookup(_, message: Message):
     if len(message.command) < 2:
         return await message.reply_text("ip address is missing")
