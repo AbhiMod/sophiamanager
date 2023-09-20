@@ -5,8 +5,10 @@ from pyrogram.types import Message
 from MukeshRobot import DRAGONS, dispatcher,OWNER_ID,pbot
 
 # For /help menu
-__MODULE__ = "iplookup"
-__HELP__ = """
+__mod_name__ = "Ip-lookup"
+__help__ = """
+──「  Free Tools 」──
+
 /iplookup [ip address] to get the details about that ip
 """
 
