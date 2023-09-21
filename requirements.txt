@@ -51,6 +51,7 @@ dnspython
 asyncio
 gtts
 heroku3
+humanize
 alphabet_detector
 wget
 nekos.py
@@ -60,5 +61,6 @@ youtube_search_python
 pyshorteners
 faker
 pyfiglet
-openai==0.27.2
+openai
 bardapi
+replicate
