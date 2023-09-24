@@ -7,7 +7,7 @@ from MukeshRobot import dispatcher
 from MukeshRobot.modules.disable import DisableAbleCommandHandler
 
 reactions = [
-   "⚡️ ᴘʀɪᴄᴇ ᴏꜰ ᴛᴇʟᴇɢʀᴀᴍ ᴍᴇᴍʙᴇʀꜱ 100% ɴᴏɴ ᴅʀᴏᴘ
+   """⚡️ ᴘʀɪᴄᴇ ᴏꜰ ᴛᴇʟᴇɢʀᴀᴍ ᴍᴇᴍʙᴇʀꜱ 100% ɴᴏɴ ᴅʀᴏᴘ
 1. 60ʀꜱ 1ᴋ ᴍᴇᴍʙᴇʀꜱ ʟᴏᴡ ᴘʀɪᴄᴇ
 💨ꜱᴛᴀʀᴛ - ɪɴꜱᴛᴀɴᴛ ᴛᴏ 30ᴍɪɴᴜᴛᴇꜱ
 🚀ꜱᴘᴇᴇᴅ - 100ᴋʀᴇᴀʟ ᴅᴀɪʟʏ ꜱᴘᴇᴇᴅ
@@ -40,7 +40,7 @@ reactions = [
 
 ɴᴏᴛᴇ : ɪꜰ ʏᴏᴜ ᴏᴅᴇʀ ʙᴜʟʟᴋ ɪ ᴡɪʟʟ ɢɪᴠᴇ ᴅɪꜱᴄᴏᴜɴᴛ. 
 
-ʏᴏᴜ ᴡᴀɴᴛ ᴀᴅᴅ ᴍᴇᴍʙᴇʀꜱ ᴅᴍ  : @AM_YTBOTT",
+ʏᴏᴜ ᴡᴀɴᴛ ᴀᴅᴅ ᴍᴇᴍʙᴇʀꜱ ᴅᴍ  : @AM_YTBOTT""",
 ]
 
 
