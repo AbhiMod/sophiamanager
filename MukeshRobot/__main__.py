@@ -572,10 +572,10 @@ def MukeshRobot_Main_Callback(update: Update, context: CallbackContext):
 
 ⚡️ /add ᴀᴍᴏᴜɴᴛ ᴏꜰ ᴍᴇᴍʙᴇʀꜱ ʟɪᴋᴇ : `/add 1000` ᴏɴʟʏ ꜰᴏʀ ᴏᴡɴᴇʀ 
 
-⚡️ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ ᴅᴍ : @AM_YTSUPPORT
-⚡️ ꜱᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ : @AM_YTSUPPORT
-⚡️ ɴᴏᴛᴇ : ᴏɴᴄᴇ ʏᴏᴜ ꜱᴜʙᴍɪᴛ ᴀɴ ᴏʀᴅᴇʀ, ᴛʜᴇʀᴇ ɪꜱ ɴᴏ ᴘᴏꜱꜱɪʙɪʟɪᴛʏ ꜰᴏʀ ᴀ ᴄᴀɴᴄᴇʟᴀᴛɪᴏɴ & Enable ADD Member.
-⭕️ 𝗶𝗺𝗽𝗼𝗿𝘁𝗮𝗻𝘁 : Subjects of Porn/drugs/earnings/scam/cheating/gun are prohibited and Orders will be cancelled.🚫
+⚡️ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ ᴅᴍ : [ᴀᴍʙᴏᴛ](https://t.me/AM_YTBOTT)
+⚡️ ꜱᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ : [ꜱᴜᴘᴘᴏʀᴛ](https://t.me/AM_YTSUPPORT)
+⚡️ ɴᴏᴛᴇ : ᴏɴᴄᴇ ʏᴏᴜ ꜱᴜʙᴍɪᴛ ᴀɴ ᴏʀᴅᴇʀ, ᴛʜᴇʀᴇ ɪꜱ ɴᴏ ᴘᴏꜱꜱɪʙɪʟɪᴛʏ ꜰᴏʀ ᴀ ᴄᴀɴᴄᴇʟᴀᴛɪᴏɴ & ᴇɴᴀʙʟᴇ ᴀᴅᴅ ᴍᴇᴍʙᴇʀ.
+⭕️ 𝗶𝗺𝗽𝗼𝗿𝘁𝗮𝗻𝘁 : ꜱᴜʙᴊᴇᴄᴛꜱ ᴏꜰ ᴘᴏʀɴ/ᴅʀᴜɢꜱ/ᴇᴀʀɴɪɴɢꜱ/ꜱᴄᴀᴍ/ᴄʜᴇᴀᴛɪɴɢ/ɢᴜɴ ᴀʀᴇ ᴘʀᴏʜɪʙɪᴛᴇᴅ ᴀɴᴅ ᴏʀᴅᴇʀꜱ ᴡɪʟʟ ʙᴇ ᴄᴀɴᴄᴇʟʟᴇᴅ.🚫
 """,parse_mode=ParseMode.MARKDOWN,
             
             reply_markup=InlineKeyboardMarkup(
