@@ -401,7 +401,7 @@ def Mukeshh_about_callback(update: Update, context: CallbackContext):
             ],
             [
                 InlineKeyboardButton(
-                    text="👨‍💻ᴅᴇᴠᴇʟᴏᴩᴇʀ", url=f"tg://user?id={OWNER_ID}"
+                    text="👨‍💻 ᴄᴏɴᴛᴀᴄᴛ", url=f"tg://user?id={OWNER_ID}"
                 ),
             ],
             [
@@ -555,24 +555,36 @@ def MukeshRobot_Main_Callback(update: Update, context: CallbackContext):
             )
 
     elif query.data=="basic_helpp":
-        query.message.edit_caption("""Bᴀsɪᴄ Cᴏᴍᴍᴀɴᴅs.
-👮🏻Aᴠᴀɪʟᴀʙʟᴇ ᴛᴏ Aᴅᴍɪɴs & Mᴏᴅᴇʀᴀᴛᴏʀs.
-🕵🏻Aᴠᴀɪʟᴀʙʟᴇ ᴛᴏ Aᴅᴍɪɴs.
+        query.message.edit_caption("""
+ ᴍᴇᴍʙᴇʀꜱ ᴀᴅᴅɪɴɢ ᴛʜʀᴏᴡ ʙᴏᴛ ᴛᴏ ɢʀᴏᴜᴘ & ᴄʜᴀɴɴᴇʟ.
+ ꜰᴀꜱᴛ ᴀᴅᴅ ᴍᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ & ᴅᴍ ᴛᴏ ᴏᴡɴᴇʀ ꜰᴏʀ ᴀᴅᴅɪɴɢ.
+⚡️ ʜɪɢʜᴛ ꜱᴘᴇᴇᴅ ᴍᴇᴍʙᴇʀꜱ ᴀᴅᴅɪɴɢ
+⚡️ ɴᴏɴ ᴅʀᴏᴘ ᴍᴇᴍʙᴇʀꜱ
+⚡️ ʟᴏᴡ ᴘʀɪᴄᴇ & ʙᴇꜱᴛ
+⚡️ ꜱᴛᴀʀᴛ - ɪɴꜱᴛᴀɴᴛ ᴛᴏ 30ᴍɪɴᴜᴛᴇꜱ
+⚡️ ꜱᴘᴇᴇᴅ - 50ᴋ ʀᴇᴀʟ ᴅᴀɪʟʏ ꜱᴘᴇᴇᴅ
+⚡️ ɢᴜᴀʀᴀɴᴛᴇᴇ 
+⚡️ ꜱᴜɪᴛᴀʙʟᴇ ꜰᴏʀ ᴀʟʟ ᴄᴏᴜɴᴛʀʏ ᴏᴡɴᴇʀ
+⚡️ ʙᴀꜱᴇ - 500ᴋ
+⚡️ ᴄʜᴀɴɴᴇʟ + ɢʀᴏᴜᴘ
 
-👮🏻 /reload ᴜᴘᴅᴀᴛᴇs ᴛʜᴇ Aᴅᴍɪɴs ʟɪsᴛ ᴀɴᴅ ᴛʜᴇɪʀ ᴘʀɪᴠɪʟᴇɢᴇs.
-🕵🏻 /settings ʟᴇᴛs ʏᴏᴜ ᴍᴀɴᴀɢᴇ ᴀʟʟ ᴛʜᴇ Bᴏᴛ sᴇᴛᴛɪɴɢs ɪɴ ᴀ ɢʀᴏᴜᴘ.
-👮🏻 /ban ʟᴇᴛs ʏᴏᴜ ʙᴀɴ ᴀ ᴜsᴇʀ ғʀᴏᴍ ᴛʜᴇ ɢʀᴏᴜᴘ ᴡɪᴛʜᴏᴜᴛ ɢɪᴠɪɴɢ ʜɪᴍ ᴛʜᴇ ᴘᴏssɪʙɪʟɪᴛʏ ᴛᴏ Jᴏɪɴ ᴀɢᴀɪɴ ᴜsɪɴɢ ᴛʜᴇ ʟɪɴᴋ ᴏғ ᴛʜᴇ ɢʀᴏᴜᴘ.
-👮🏻 /mute ᴘᴜᴛs ᴀ ᴜsᴇʀ ɪɴ ʀᴇᴀᴅ-ᴏɴʟʏ ᴍᴏᴅᴇ. Hᴇ ᴄᴀɴ ʀᴇᴀᴅ ʙᴜᴛ ʜᴇ ᴄᴀɴ'ᴛ sᴇɴᴅ ᴀɴʏ ᴍᴇssᴀɢᴇs.
-👮🏻 /kick ʙᴀɴs ᴀ ᴜsᴇʀ ғʀᴏᴍ ᴛʜᴇ ɢʀᴏᴜᴘ, ɢɪᴠɪɴɢ ʜɪᴍ ᴛʜᴇ ᴘᴏssɪʙɪʟɪᴛʏ ᴛᴏ Jᴏɪɴ ᴀɢᴀɪɴ ᴡɪᴛʜ ᴛʜᴇ ʟɪɴᴋ ᴏғ ᴛʜᴇ ɢʀᴏᴜᴘ.
-👮🏻 /unban ʟᴇᴛs ʏᴏᴜ ʀᴇᴍᴏᴠᴇ ᴀ ᴜsᴇʀ ғʀᴏᴍ ɢʀᴏᴜᴘ's ʙʟᴀᴄᴋʟɪsᴛ, ɢɪᴠɪɴɢ ᴛʜᴇᴍ ᴛʜᴇ ᴘᴏssɪʙɪʟɪᴛʏ ᴛᴏ Jᴏɪɴ ᴀɢᴀɪɴ ᴡɪᴛʜ ᴛʜᴇ ʟɪɴᴋ ᴏғ ᴛʜᴇ ɢʀᴏᴜᴘ.
-👮🏻 /info ɢɪᴠᴇs ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴀ ᴜsᴇʀ.
+📝 /price ᴍᴇᴍʙᴇʀꜱ ᴀᴅᴅɪɴɢ ᴘʀɪᴄᴇ ʟɪꜱᴛ 
 
-◽️ /staff ɢɪᴠᴇs ᴛʜᴇ ᴄᴏᴍᴘʟᴇᴛᴇ Lɪsᴛ ᴏғ ɢʀᴏᴜᴘ Sᴛᴀғғ!.""",parse_mode=ParseMode.MARKDOWN,
+⚡️ /add ᴀᴍᴏᴜɴᴛ ᴏꜰ ᴍᴇᴍʙᴇʀꜱ ʟɪᴋᴇ : `/add 1000` ᴏɴʟʏ ꜰᴏʀ ᴏᴡɴᴇʀ 
+
+⚡️ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ ᴅᴍ : @AM_YTSUPPORT
+⚡️ ꜱᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ : @AM_YTSUPPORT
+⚡️ ɴᴏᴛᴇ : ᴏɴᴄᴇ ʏᴏᴜ ꜱᴜʙᴍɪᴛ ᴀɴ ᴏʀᴅᴇʀ, ᴛʜᴇʀᴇ ɪꜱ ɴᴏ ᴘᴏꜱꜱɪʙɪʟɪᴛʏ ꜰᴏʀ ᴀ ᴄᴀɴᴄᴇʟᴀᴛɪᴏɴ & Enable ADD Member.
+⭕️ 𝗶𝗺𝗽𝗼𝗿𝘁𝗮𝗻𝘁 : Subjects of Porn/drugs/earnings/scam/cheating/gun are prohibited and Orders will be cancelled.🚫
+""",parse_mode=ParseMode.MARKDOWN,
             
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
+                        InlineKeyboardButton(text="➕ Aᴅᴅ Mᴇ Yᴏᴜʀ Gʀᴏᴜᴘ",url=f"https://t.me/{dispatcher.bot.username}?startgroup=true",),
+                        InlineKeyboardButton(text="👨‍💻 ᴅᴍ ꜰᴏʀ ᴀᴅᴅɪɴɢ", url=f"tg://user?id={OWNER_ID}"),
                         InlineKeyboardButton(text="• ʙᴀᴄᴋ •", callback_data="mukeshh_"),
+                        
                     ]
                 ]
             ),
