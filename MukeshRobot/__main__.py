@@ -401,7 +401,7 @@ def Mukeshh_about_callback(update: Update, context: CallbackContext):
             ],
             [
                 InlineKeyboardButton(
-                    text="👨‍💻 ᴄᴏɴᴛᴀᴄᴛ", url=f"tg://user?id={OWNER_ID}"
+                    text="🗝 ᴅᴍ ꜰᴏʀ ᴀᴅᴅɪɴɢ", url=f"tg://user?id={OWNER_ID}"
                 ),
             ],
             [
