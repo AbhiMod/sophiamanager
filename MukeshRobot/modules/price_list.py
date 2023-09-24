@@ -13,7 +13,7 @@ from pyrogram import Client, filters
 # Define a command handler
 @pbot.on_message(filters.command("price"))
 async def start_command(client, message):
-    await message.reply("""ʜᴇʏ ʙʀᴏ,
+    await message.reply("""
 ⚡️ ᴘʀɪᴄᴇ ᴏꜰ ᴛᴇʟᴇɢʀᴀᴍ ᴍᴇᴍʙᴇʀꜱ 100% ɴᴏɴ ᴅʀᴏᴘ ⚡️
 1. 60ʀꜱ 1ᴋ ᴍᴇᴍʙᴇʀꜱ ʟᴏᴡ ᴘʀɪᴄᴇ
 💨ꜱᴛᴀʀᴛ - ɪɴꜱᴛᴀɴᴛ ᴛᴏ 30ᴍɪɴᴜᴛᴇꜱ
@@ -45,9 +45,12 @@ async def start_command(client, message):
 🔥 ᴄʜᴀɴɴᴇʟ + ɢʀᴏᴜᴘ
 🔥 ʙᴇꜱᴛ ᴛᴇʟᴇɢʀᴀᴍ ᴍᴇᴍʙᴇʀꜱ
 
-ɴᴏᴛᴇ : ɪꜰ ʏᴏᴜ ᴏᴅᴇʀ ʙᴜʟʟᴋ ɪ ᴡɪʟʟ ɢɪᴠᴇ ᴅɪꜱᴄᴏᴜɴᴛ. """)
+ɴᴏᴛᴇ : ɪꜰ ʏᴏᴜ ᴏᴅᴇʀ ʙᴜʟʟᴋ ɪ ᴡɪʟʟ ɢɪᴠᴇ ᴅɪꜱᴄᴏᴜɴᴛ. 
+
+ʏᴏᴜ ᴡᴀɴᴛ ᴀᴅᴅ ᴍᴇᴍʙᴇʀꜱ ᴅᴍ ᴛᴏ [ᴀᴍʙᴏᴛ](https://t.me/AM_YTBOTT) : @AM_YTBOTT
+ꜱᴜᴘᴘᴏʀᴛ [ᴄʜᴀɴɴᴇʟ1](https://t.me/AbhiModszYT_Return)
+ꜱᴜᴘᴘᴏʀᴛ [ᴄʜᴀɴɴᴇʟ2](https://t.me/AmBotYT)
+ꜱᴜᴘᴘᴏʀᴛ [ɢʀᴏᴜᴘ](https://t.me/AM_YTSUPPORT)
+""")
     
-@pbot.on_message(filters.text)
-async def echo_message(client, message):
-    await message.reply(message.text)
 
