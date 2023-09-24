@@ -548,7 +548,7 @@ def MukeshRobot_Main_Callback(update: Update, context: CallbackContext):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(text="• ʙᴀᴄᴋ •", callback_data="mukeshh_"),
+                        InlineKeyboardButton(text="• ʙᴀᴄᴋ •", callback_data="Main_help"),
                     ]
                 ]
             ),
@@ -572,7 +572,7 @@ def MukeshRobot_Main_Callback(update: Update, context: CallbackContext):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(text="• ʙᴀᴄᴋ •", callback_data="basic_helpp"),
+                        InlineKeyboardButton(text="• ʙᴀᴄᴋ •", callback_data="mukeshh_"),
                     ]
                 ]
             ),
