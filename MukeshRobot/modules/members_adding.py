@@ -73,7 +73,7 @@ def ping(update: Update, context: CallbackContext):
     msg = update.effective_message
 
     start_time = time.time()
-    message = msg.reply_text("ʏᴏᴜʀ ᴏᴅᴇʀ ᴄʜᴇᴄᴋɪɴɢ...")
+    message = msg.reply_text("ᴏᴅᴇʀ ᴄʜᴇᴄᴋɪɴɢ...")
     end_time = time.time()
     telegram_ping = str(round((end_time - start_time) * 1000, 3)) + " ms"
     uptime = get_readable_time((time.time() - StartTime))
@@ -83,7 +83,8 @@ def ping(update: Update, context: CallbackContext):
         "ʏᴏᴜʀ ᴍᴇᴍʙᴇʀꜱ\n"
         "ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ ᴏᴅᴇʀ\n"
         "ᴍᴇᴍʙᴇʀᴇ ᴀᴅᴅɪɴɢ ꜱᴛᴀʀᴛɪɴɢ ꜱᴏᴏɴ..\n"
-        "ᴛʜᴀɴᴋꜱ ꜰᴏʀ ᴏᴅᴇʀ 💕".format(telegram_ping, uptime),
+        "ᴛʜᴀɴᴋꜱ ꜰᴏʀ ᴏᴅᴇʀ 💕\n"
+        "<b>ᴛɪᴍᴇ ᴛᴀᴋᴇɴ:</b> <code>{}</code>".format(telegram_ping, uptime),
         parse_mode=ParseMode.HTML,
     )
 
