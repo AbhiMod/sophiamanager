@@ -8,38 +8,12 @@ from telegram import __version__ as lver
 from telethon import __version__ as tver
 
 from MukeshRobot import SUPPORT_CHAT, pbot,BOT_USERNAME, OWNER_ID,BOT_NAME,START_IMG
+from pyrogram import Client, filters
 
-PHOTO = [
-    "https://graph.org/file/eccd596f156a68d7005df.jpg",
-    "https://graph.org/file/8ed15cb1f5d95dc513b3d.jpg",
-    "https://graph.org/file/eccd596f156a68d7005df.jpg",
-    "https://graph.org/file/8ed15cb1f5d95dc513b3d.jpg",
-    "https://graph.org/file/eccd596f156a68d7005df.jpg",
-]
-
-
+# Define a command handler
 @pbot.on_message(filters.command("price"))
-async def restart(client, m: Message):
-    await m.delete()
-    accha = await m.reply("💕")
-    await asyncio.sleep(0.2)
-    await accha.edit("𝙋𝙧𝙞𝙘𝙚𝙡𝙞𝙨𝙩.")
-    await asyncio.sleep(0.1)
-    await accha.edit("𝙋𝙧𝙞𝙘𝙚𝙡𝙞𝙨𝙩..")
-    await asyncio.sleep(0.1)
-    await accha.edit("𝙋𝙧𝙞𝙘𝙚𝙡𝙞𝙨𝙩...")
-
-    await accha.delete()
-    await asyncio.sleep(0.3)
-    umm = await m.reply_sticker(
-        "CAACAgQAAxkBAAEDKXplD8gZpL2nugN0m71tCJNKNzelbAAC2gwAAl3eYFIMXN5QYJR0fDAE"
-    )
-    await umm.delete()
-    await asyncio.sleep(0.2)
-    await m.reply_photo(
-        START_IMG,
-        caption=f"""
- ʜᴇʏ ʙʀᴏ,
+async def start_command(client, message):
+    await message.reply("""ʜᴇʏ ʙʀᴏ,
 ⚡️ ᴘʀɪᴄᴇ ᴏꜰ ᴛᴇʟᴇɢʀᴀᴍ ᴍᴇᴍʙᴇʀꜱ 100% ɴᴏɴ ᴅʀᴏᴘ ⚡️
 1. 60ʀꜱ 1ᴋ ᴍᴇᴍʙᴇʀꜱ ʟᴏᴡ ᴘʀɪᴄᴇ
 💨ꜱᴛᴀʀᴛ - ɪɴꜱᴛᴀɴᴛ ᴛᴏ 30ᴍɪɴᴜᴛᴇꜱ
@@ -71,6 +45,9 @@ async def restart(client, m: Message):
 🔥 ᴄʜᴀɴɴᴇʟ + ɢʀᴏᴜᴘ
 🔥 ʙᴇꜱᴛ ᴛᴇʟᴇɢʀᴀᴍ ᴍᴇᴍʙᴇʀꜱ
 
-ɴᴏᴛᴇ : ɪꜰ ʏᴏᴜ ᴏᴅᴇʀ ʙᴜʟʟᴋ ɪ ᴡɪʟʟ ɢɪᴠᴇ ᴅɪꜱᴄᴏᴜɴᴛ.
-""",
-    )
+ɴᴏᴛᴇ : ɪꜰ ʏᴏᴜ ᴏᴅᴇʀ ʙᴜʟʟᴋ ɪ ᴡɪʟʟ ɢɪᴠᴇ ᴅɪꜱᴄᴏᴜɴᴛ. """)
+    
+@pbot.on_message(filters.text)
+async def echo_message(client, message):
+    await message.reply(message.text)
+
