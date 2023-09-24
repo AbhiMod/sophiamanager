@@ -580,12 +580,9 @@ def MukeshRobot_Main_Callback(update: Update, context: CallbackContext):
             
             reply_markup=InlineKeyboardMarkup(
                 [
-                    [
-                        InlineKeyboardButton(text="➕ Aᴅᴅ Mᴇ Yᴏᴜʀ Gʀᴏᴜᴘ",url=f"https://t.me/{dispatcher.bot.username}?startgroup=true",),
-                        InlineKeyboardButton(text="👨‍💻 ᴅᴍ ꜰᴏʀ ᴀᴅᴅɪɴɢ", url=f"tg://user?id={OWNER_ID}"),
-                        InlineKeyboardButton(text="• ʙᴀᴄᴋ •", callback_data="mukeshh_"),
-                        
-                    ]
+                    [ InlineKeyboardButton(text="➕ Aᴅᴅ Mᴇ Yᴏᴜʀ Gʀᴏᴜᴘ",url=f"https://t.me/{dispatcher.bot.username}?startgroup=true",),]
+                    [InlineKeyboardButton(text="👨‍💻 ᴅᴍ ꜰᴏʀ ᴀᴅᴅɪɴɢ", url=f"tg://user?id={OWNER_ID}"),]
+                    [InlineKeyboardButton(text="• ʙᴀᴄᴋ •", callback_data="mukeshh_"),]
                 ]
             ),
             )
