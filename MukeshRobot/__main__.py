@@ -103,7 +103,7 @@ buttons = [
         ),
     ],
     [
-        InlineKeyboardButton(text="⚡️ ᴍᴇᴍʙᴇʀꜱ ᴀᴅᴅɪɴɢ 🔥", callback_data="mukeshh_"),
+        InlineKeyboardButton(text="ᴍᴇᴍʙᴇʀꜱ ᴀᴅᴅɪɴɢ", callback_data="mukeshh_"),
     ],
     [
         InlineKeyboardButton(text="🛡 ʜᴇʟᴘ ᴀɴᴅ ᴄᴏᴍᴍᴀɴᴅs 🎸", callback_data="Main_help"),
