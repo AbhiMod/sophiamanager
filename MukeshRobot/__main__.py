@@ -492,7 +492,7 @@ def MukeshRobot_Main_Callback(update: Update, context: CallbackContext):
         )
 
 
-    def MukeshRobot_Main_Callback(update: Update, context: CallbackContext):
+    def MukeshRobott_Main_Callback(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "Main_helpp":
         query.message.edit_caption(f"""
@@ -1220,6 +1220,8 @@ def main():
     )
     mukeshrobot_main_handler = CallbackQueryHandler(
         MukeshRobot_Main_Callback, pattern=r".*_help",run_async=True)
+    mukeshrobott_main_handler = CallbackQueryHandler(
+        MukeshRobott_Main_Callback, pattern=r".*_members",run_async=True)
     donate_handler = CommandHandler("donate", donate)
     migrate_handler = MessageHandler(Filters.status_update.migrate, migrate_chats)
     dispatcher.add_handler(start_handler)
@@ -1233,6 +1235,7 @@ def main():
     dispatcher.add_handler(migrate_handler)
     dispatcher.add_handler(donate_handler)
     dispatcher.add_handler(mukeshrobot_main_handler)
+    dispatcher.add_handler(mukeshrobott_main_handler)
     dispatcher.add_error_handler(error_callback)
     dispatcher.add_handler(source_callback_handler)
     LOGGER.info("Using long polling.")
