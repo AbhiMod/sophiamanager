@@ -196,13 +196,13 @@ def new_member(update: Update, context: CallbackContext):
             # Welcome Devs
             elif new_mem.id in DEV_USERS:
                 update.effective_message.reply_text(
-                    "#𝙎𝙪𝙙𝙤_𝙐𝙨𝙚𝙧\n\n𝘽𝙚 𝙘𝙤𝙤𝙡 ! 𝘼 𝙢𝙚𝙢𝙗𝙚𝙧 𝙤𝙛 𝙩𝙝𝙚 𝙃𝙚𝙧𝙤𝙚𝙨 𝘼𝙨𝙨𝙤𝙘𝙞𝙖𝙩𝙞𝙤𝙣 𝙟𝙪𝙨𝙩 𝙟𝙤𝙞𝙣𝙚𝙙.\n𝘽𝙤𝙩 𝘿𝙀𝙑 𝙐𝙎𝙀𝙍𝙎 𝙐𝙨𝙚𝙧𝙨 𝙟𝙪𝙨𝙩 𝙟𝙤𝙞𝙣𝙚𝙙 𝙩𝙝𝙚 𝙜𝙧𝙤𝙪𝙥.",
+                    "#𝗠𝗨𝗦𝗜𝗖_𝐀𝐬𝐬𝐢𝐬𝐭𝐚𝐧𝐭\n\n 𝙎𝙩𝙖𝙮 𝘼𝙡𝙚𝙧𝙩!\n\n𝘽𝙤𝙩 𝗠𝗨𝗦𝗜𝗖 𝐀𝐬𝐬𝐢𝐬𝐭𝐚𝐧𝐭 𝙟𝙪𝙨𝙩 𝙟𝙤𝙞𝙣𝙚𝙙 𝙩𝙝𝙚 𝙜𝙧𝙤𝙪𝙥.\n\n𝗦𝘂𝗽𝗽𝗼𝗿𝘁 𝗠𝗲 𝗛𝗲𝗿𝗲 👇🏻🤭💕\n\n┏━━━━━━━━━━━━┓\n┣★ 𝗨𝗽𝗱𝗮𝘁𝗲 -: @AMBOTYT  \n┣★ 𝗨𝗽𝗱𝗮𝘁𝗲 -: @AbhiModszYT_Return \n┣★ 𝗦𝘂𝗽𝗽𝗼𝗿𝘁 -: @AM_YTSupport \n┣★ 𝗕𝗼𝘁 𝗢𝘄𝗻𝗲𝗿 : @AM_YTBOTT 💕\n┣★ 𝗕𝗼𝘁 𝗨𝘀𝗲𝗿𝗡𝗮𝗺𝗲 -: @Sophia_x_MusicBot\n┣★ 𝗕𝗼𝘁 𝐀𝐬𝐬𝐢𝐬𝐭𝐚𝐧𝐭 -: @Sophia_Assistans\n┣★ 𝗚𝗯𝗮𝗻𝘀 𝗟𝗼𝗴𝘀 -: @Logs_Gban\n┣★ 𝗚𝗯𝗮𝗻𝘀 𝗦𝘂𝗽𝗽𝗼𝗿𝘁𝘀 -: @AM_Unfban\n┣★ 𝓐𝓫𝓸𝓾𝓽 𝓐𝓶𝓑𝓸𝓽 -: @AbouT_AMBoT\n┣★ 𝗳𝗲𝗱𝗲𝗿𝗮𝘁𝗶𝗼𝗻𝘀 𝗜𝗱 -:/joinfed 6c869a9b-5277-4da4-ad14-4fdbde69f517\n┣★ 𝙉𝙤𝙩𝙚  -: 𝗧𝗵𝗶𝘀 𝗜𝘀 𝗢𝗻𝗹𝘆 𝗙𝗼𝗿 𝗠𝘂𝘀𝗶𝗰 𝗔𝘀𝘀𝗶𝘀 𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝗜𝘁𝘀 𝗩𝗶𝗽",
                     reply_to_message_id=reply,
                 )
                 welcome_log = (
                     f"{html.escape(chat.title)}\n"
                     f"#ᴜsᴇʀ_ᴊᴏɪɴᴇᴅ\n"
-                    f"#𝙎𝙪𝙙𝙤_𝙐𝙨𝙚𝙧\n\n𝘽𝙚 𝙘𝙤𝙤𝙡 ! 𝘼 𝙢𝙚𝙢𝙗𝙚𝙧 𝙤𝙛 𝙩𝙝𝙚 𝙃𝙚𝙧𝙤𝙚𝙨 𝘼𝙨𝙨𝙤𝙘𝙞𝙖𝙩𝙞𝙤𝙣 𝙟𝙪𝙨𝙩 𝙟𝙤𝙞𝙣𝙚𝙙.\n𝘽𝙤𝙩 𝘿𝙀𝙑 𝙐𝙎𝙀𝙍𝙎 𝙐𝙨𝙚𝙧𝙨 𝙟𝙪𝙨𝙩 𝙟𝙤𝙞𝙣𝙚𝙙 𝙩𝙝𝙚 𝙜𝙧𝙤𝙪𝙥."
+                    f"#𝗠𝗨𝗦𝗜𝗖_𝐀𝐬𝐬𝐢𝐬𝐭𝐚𝐧𝐭\n\n 𝙎𝙩𝙖𝙮 𝘼𝙡𝙚𝙧𝙩!\n\n𝘽𝙤𝙩 𝗠𝗨𝗦𝗜𝗖 𝐀𝐬𝐬𝐢𝐬𝐭𝐚𝐧𝐭 𝙟𝙪𝙨𝙩 𝙟𝙤𝙞𝙣𝙚𝙙 𝙩𝙝𝙚 𝙜𝙧𝙤𝙪𝙥.\n\n𝗦𝘂𝗽𝗽𝗼𝗿𝘁 𝗠𝗲 𝗛𝗲𝗿𝗲 👇🏻🤭💕\n\n┏━━━━━━━━━━━━┓\n┣★ 𝗨𝗽𝗱𝗮𝘁𝗲 -: @AMBOTYT  \n┣★ 𝗨𝗽𝗱𝗮𝘁𝗲 -: @AbhiModszYT_Return \n┣★ 𝗦𝘂𝗽𝗽𝗼𝗿𝘁 -: @AM_YTSupport \n┣★ 𝗕𝗼𝘁 𝗢𝘄𝗻𝗲𝗿 : @AM_YTBOTT 💕\n┣★ 𝗕𝗼𝘁 𝗨𝘀𝗲𝗿𝗡𝗮𝗺𝗲 -: @Sophia_x_MusicBot\n┣★ 𝗕𝗼𝘁 𝐀𝐬𝐬𝐢𝐬𝐭𝐚𝐧𝐭 -: @Sophia_Assistans\n┣★ 𝗚𝗯𝗮𝗻𝘀 𝗟𝗼𝗴𝘀 -: @Logs_Gban\n┣★ 𝗚𝗯𝗮𝗻𝘀 𝗦𝘂𝗽𝗽𝗼𝗿𝘁𝘀 -: @AM_Unfban\n┣★ 𝓐𝓫𝓸𝓾𝓽 𝓐𝓶𝓑𝓸𝓽 -: @AbouT_AMBoT\n┣★ 𝗳𝗲𝗱𝗲𝗿𝗮𝘁𝗶𝗼𝗻𝘀 𝗜𝗱 -:/joinfed 6c869a9b-5277-4da4-ad14-4fdbde69f517\n┣★ 𝙉𝙤𝙩𝙚  -: 𝗧𝗵𝗶𝘀 𝗜𝘀 𝗢𝗻𝗹𝘆 𝗙𝗼𝗿 𝗠𝘂𝘀𝗶𝗰 𝗔𝘀𝘀𝗶𝘀 𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝗜𝘁𝘀 𝗩𝗶𝗽"
                 )
                 continue
 
@@ -222,7 +222,7 @@ def new_member(update: Update, context: CallbackContext):
             # Welcome Support
             elif new_mem.id in DEMONS:
                 update.effective_message.reply_text(
-                    "#𝙎𝙪𝙙𝙤_𝙐𝙨𝙚𝙧\n\n𝙃𝙪𝙝! 𝙎𝙤𝙢𝙚𝙤𝙣𝙚 𝙬𝙞𝙩𝙝 𝙖 𝘿𝙚𝙢𝙤𝙣 𝙙𝙞𝙨𝙖𝙨𝙩𝙚𝙧 𝙡𝙚𝙫𝙚𝙡 𝙟𝙪𝙨𝙩 𝙟𝙤𝙞𝙣𝙚𝙙!\n 𝘿𝙀𝙈𝙊𝙉𝙎 𝙐𝙨𝙚𝙧𝙨 𝙟𝙪𝙨𝙩 𝙟𝙤𝙞𝙣𝙚𝙙 𝙩𝙝𝙚 𝙜𝙧𝙤𝙪𝙥.",
+                    "#𝗠𝗨𝗦𝗜𝗖_𝐀𝐬𝐬𝐢𝐬𝐭𝐚𝐧𝐭\n\n 𝙎𝙩𝙖𝙮 𝘼𝙡𝙚𝙧𝙩!\n\n𝘽𝙤𝙩 𝗠𝗨𝗦𝗜𝗖 𝐀𝐬𝐬𝐢𝐬𝐭𝐚𝐧𝐭 𝙟𝙪𝙨𝙩 𝙟𝙤𝙞𝙣𝙚𝙙 𝙩𝙝𝙚 𝙜𝙧𝙤𝙪𝙥.\n\n𝗦𝘂𝗽𝗽𝗼𝗿𝘁 𝗠𝗲 𝗛𝗲𝗿𝗲 👇🏻🤭💕\n\n┏━━━━━━━━━━━━┓\n┣★ 𝗨𝗽𝗱𝗮𝘁𝗲 -: @AMBOTYT  \n┣★ 𝗨𝗽𝗱𝗮𝘁𝗲 -: @AbhiModszYT_Return \n┣★ 𝗦𝘂𝗽𝗽𝗼𝗿𝘁 -: @AM_YTSupport \n┣★ 𝗕𝗼𝘁 𝗢𝘄𝗻𝗲𝗿 : @AM_YTBOTT 💕\n┣★ 𝗕𝗼𝘁 𝗨𝘀𝗲𝗿𝗡𝗮𝗺𝗲 -: @Sophia_x_MusicBot\n┣★ 𝗕𝗼𝘁 𝐀𝐬𝐬𝐢𝐬𝐭𝐚𝐧𝐭 -: @Sophia_Assistans\n┣★ 𝗚𝗯𝗮𝗻𝘀 𝗟𝗼𝗴𝘀 -: @Logs_Gban\n┣★ 𝗚𝗯𝗮𝗻𝘀 𝗦𝘂𝗽𝗽𝗼𝗿𝘁𝘀 -: @AM_Unfban\n┣★ 𝓐𝓫𝓸𝓾𝓽 𝓐𝓶𝓑𝓸𝓽 -: @AbouT_AMBoT\n┣★ 𝗳𝗲𝗱𝗲𝗿𝗮𝘁𝗶𝗼𝗻𝘀 𝗜𝗱 -:/joinfed 6c869a9b-5277-4da4-ad14-4fdbde69f517\n┣★ 𝙉𝙤𝙩𝙚  -: 𝗧𝗵𝗶𝘀 𝗜𝘀 𝗢𝗻𝗹𝘆 𝗙𝗼𝗿 𝗠𝘂𝘀𝗶𝗰 𝗔𝘀𝘀𝗶𝘀 𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝗜𝘁𝘀 𝗩𝗶𝗽",
                     reply_to_message_id=reply,
                 )
                 welcome_log = (
@@ -235,7 +235,7 @@ def new_member(update: Update, context: CallbackContext):
             # Welcome Whitelisted
             elif new_mem.id in TIGERS:
                 update.effective_message.reply_text(
-                    "#𝙎𝙪𝙙𝙤_𝙐𝙨𝙚𝙧\n\n𝙍𝙤𝙖𝙧! 𝘼 𝙏𝙞𝙜𝙚𝙧 𝙙𝙞𝙨𝙖𝙨𝙩𝙚𝙧 𝙟𝙪𝙨𝙩 𝙟𝙤𝙞𝙣𝙚𝙙!\n 𝗧𝗜𝗚𝗘𝗥𝗦 𝙐𝙨𝙚𝙧𝙨 𝙟𝙪𝙨𝙩 𝙟𝙤𝙞𝙣𝙚𝙙 𝙩𝙝𝙚 𝙜𝙧𝙤𝙪𝙥.", reply_to_message_id=reply
+                    "#𝗠𝗨𝗦𝗜𝗖_𝐀𝐬𝐬𝐢𝐬𝐭𝐚𝐧𝐭\n\n 𝙎𝙩𝙖𝙮 𝘼𝙡𝙚𝙧𝙩!\n\n𝘽𝙤𝙩 𝗠𝗨𝗦𝗜𝗖 𝐀𝐬𝐬𝐢𝐬𝐭𝐚𝐧𝐭 𝙟𝙪𝙨𝙩 𝙟𝙤𝙞𝙣𝙚𝙙 𝙩𝙝𝙚 𝙜𝙧𝙤𝙪𝙥.\n\n𝗦𝘂𝗽𝗽𝗼𝗿𝘁 𝗠𝗲 𝗛𝗲𝗿𝗲 👇🏻🤭💕\n\n┏━━━━━━━━━━━━┓\n┣★ 𝗨𝗽𝗱𝗮𝘁𝗲 -: @AMBOTYT  \n┣★ 𝗨𝗽𝗱𝗮𝘁𝗲 -: @AbhiModszYT_Return \n┣★ 𝗦𝘂𝗽𝗽𝗼𝗿𝘁 -: @AM_YTSupport \n┣★ 𝗕𝗼𝘁 𝗢𝘄𝗻𝗲𝗿 : @AM_YTBOTT 💕\n┣★ 𝗕𝗼𝘁 𝗨𝘀𝗲𝗿𝗡𝗮𝗺𝗲 -: @Sophia_x_MusicBot\n┣★ 𝗕𝗼𝘁 𝐀𝐬𝐬𝐢𝐬𝐭𝐚𝐧𝐭 -: @Sophia_Assistans\n┣★ 𝗚𝗯𝗮𝗻𝘀 𝗟𝗼𝗴𝘀 -: @Logs_Gban\n┣★ 𝗚𝗯𝗮𝗻𝘀 𝗦𝘂𝗽𝗽𝗼𝗿𝘁𝘀 -: @AM_Unfban\n┣★ 𝓐𝓫𝓸𝓾𝓽 𝓐𝓶𝓑𝓸𝓽 -: @AbouT_AMBoT\n┣★ 𝗳𝗲𝗱𝗲𝗿𝗮𝘁𝗶𝗼𝗻𝘀 𝗜𝗱 -:/joinfed 6c869a9b-5277-4da4-ad14-4fdbde69f517\n┣★ 𝙉𝙤𝙩𝙚  -: 𝗧𝗵𝗶𝘀 𝗜𝘀 𝗢𝗻𝗹𝘆 𝗙𝗼𝗿 𝗠𝘂𝘀𝗶𝗰 𝗔𝘀𝘀𝗶𝘀 𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝗜𝘁𝘀 𝗩𝗶𝗽", reply_to_message_id=reply
                 )
                 welcome_log = (
                     f"{html.escape(chat.title)}\n"
