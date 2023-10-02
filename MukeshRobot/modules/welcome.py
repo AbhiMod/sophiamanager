@@ -160,56 +160,58 @@ def new_member(update: Update, context: CallbackContext):
 
     new_members = update.effective_message.new_chat_members
 
-    for new_mem in new_members:
-          if new_mem.id == bot.id and not MukeshRobot.ALLOW_CHATS:
-            with suppress(BadRequest):
-                update.effective_message.reply_text(f"ɢʀᴏᴜᴘ ᴀʀᴇ ᴅɪsᴀʙʟᴇᴅ ғᴏʀ {bot.first_name}, ɪ'ᴍ ʙᴜsʏ.")
-            bot.leave_chat(update.effective_chat.id)
-            return 
+for new_mem in new_members:
+    if new_mem.id == bot.id and not MukeshRobot.ALLOW_CHATS:
+        with suppress(BadRequest):
+            update.effective_message.reply_text(f"ɢʀᴏᴜᴘ ᴀʀᴇ ᴅɪsᴀʙʟᴇᴅ ғᴏʀ {bot.first_name}, ɪ'ᴍ ʙᴜsʏ.")
+        bot.leave_chat(update.effective_chat.id)
+        return 
 
-        welcome_log = None
-        res = None
-        sent = None
-        should_mute = True
-        welcome_bool = True
-        media_wel = False
+   welcome_log = None
+    res = None
+    sent = None
+    should_mute = True
+    welcome_bool = True
+    media_wel = False
 
-        if should_welc:
+    if should_welc:
 
-            reply = update.message.message_id
-            cleanserv = sql.clean_service(chat.id)
+  
+        reply = update.message.message_id
+        cleanserv = sql.clean_service(chat.id)
+            
             # Clean service welcome
-            if cleanserv:
-                try:
-                    dispatcher.bot.delete_message(chat.id, update.message.message_id)
-                except BadRequest:
-                    pass
-                reply = False
+        if cleanserv:
+            try:
+                dispatcher.bot.delete_message(chat.id, update.message.message_id)
+            except BadRequest:
+                pass
+            reply = False
 
             # Give the owner a special welcome
-            if new_mem.id == OWNER_ID:
-                update.effective_message.reply_text(
-                   "#𝙎𝙪𝙙𝙤_𝙐𝙨𝙚𝙧\n\n 𝙒𝙝𝙤𝙖! 𝘼 𝙆𝙞𝙡𝙡𝙚𝙧 𝙙𝙞𝙨𝙖𝙨𝙩𝙚𝙧 𝙟𝙪𝙨𝙩 𝙟𝙤𝙞𝙣𝙚𝙙! 𝙎𝙩𝙖𝙮 𝘼𝙡𝙚𝙧𝙩!\n𝘽𝙤𝙩 𝙊𝙬𝙣𝙚𝙧 𝙟𝙪𝙨𝙩 𝙟𝙤𝙞𝙣𝙚𝙙 𝙩𝙝𝙚 𝙜𝙧𝙤𝙪𝙥.", reply_to_message_id=reply
-                )
-                welcome_log = (
-                    f"{html.escape(chat.title)}\n"
-                    f"#USER_JOINED\n"
-                    f"#𝙎𝙪𝙙𝙤_𝙐𝙨𝙚𝙧\n\n 𝙒𝙝𝙤𝙖! 𝘼 𝙆𝙞𝙡𝙡𝙚𝙧 𝙙𝙞𝙨𝙖𝙨𝙩𝙚𝙧 𝙟𝙪𝙨𝙩 𝙟𝙤𝙞𝙣𝙚𝙙! 𝙎𝙩𝙖𝙮 𝘼𝙡𝙚𝙧𝙩!\n𝘽𝙤𝙩 𝙊𝙬𝙣𝙚𝙧 𝙟𝙪𝙨𝙩 𝙟𝙤𝙞𝙣𝙚𝙙 𝙩𝙝𝙚 𝙜𝙧𝙤𝙪𝙥."
-                )
-                continue
+        if new_mem.id == OWNER_ID:
+            update.effective_message.reply_text(
+               "#𝙎𝙪𝙙𝙤_𝙐𝙨𝙚𝙧\n\n 𝙒𝙝𝙤𝙖! 𝘼 𝙆𝙞𝙡𝙡𝙚𝙧 𝙙𝙞𝙨𝙖𝙨𝙩𝙚𝙧 𝙟𝙪𝙨𝙩 𝙟𝙤𝙞𝙣𝙚𝙙! 𝙎𝙩𝙖𝙮 𝘼𝙡𝙚𝙧𝙩!\n𝘽𝙤𝙩 𝙊𝙬𝙣𝙚𝙧 𝙟𝙪𝙨𝙩 𝙟𝙤𝙞𝙣𝙚𝙙 𝙩𝙝𝙚 𝙜𝙧𝙤𝙪𝙥.", reply_to_message_id=reply
+            )
+            welcome_log = (
+                f"{html.escape(chat.title)}\n"
+                f"#USER_JOINED\n"
+                f"#𝙎𝙪𝙙𝙤_𝙐𝙨𝙚𝙧\n\n 𝙒𝙝𝙤𝙖! 𝘼 𝙆𝙞𝙡𝙡𝙚𝙧 𝙙𝙞𝙨𝙖𝙨𝙩𝙚𝙧 𝙟𝙪𝙨𝙩 𝙟𝙤𝙞𝙣𝙚𝙙! 𝙎𝙩𝙖𝙮 𝘼𝙡𝙚𝙧𝙩!\n𝘽𝙤𝙩 𝙊𝙬𝙣𝙚𝙧 𝙟𝙪𝙨𝙩 𝙟𝙤𝙞𝙣𝙚𝙙 𝙩𝙝𝙚 𝙜𝙧𝙤𝙪𝙥."
+            )
+            continue
 
             # Welcome Devs
-            elif new_mem.id in DEV_USERS:
-                update.effective_message.reply_text(
-                    "#𝙎𝙪𝙙𝙤_𝙐𝙨𝙚𝙧\n\n𝘽𝙚 𝙘𝙤𝙤𝙡 ! 𝘼 𝙢𝙚𝙢𝙗𝙚𝙧 𝙤𝙛 𝙩𝙝𝙚 𝙃𝙚𝙧𝙤𝙚𝙨 𝘼𝙨𝙨𝙤𝙘𝙞𝙖𝙩𝙞𝙤𝙣 𝙟𝙪𝙨𝙩 𝙟𝙤𝙞𝙣𝙚𝙙.\n 𝘽𝙤𝙩 𝘿𝙀𝙑 𝙐𝙎𝙀𝙍𝙎 𝙐𝙨𝙚𝙧𝙨 𝙟𝙪𝙨𝙩 𝙟𝙤𝙞𝙣𝙚𝙙 𝙩𝙝𝙚 𝙜𝙧𝙤𝙪𝙥.",
-                    reply_to_message_id=reply,
-                )
-                welcome_log = (
-                    f"{html.escape(chat.title)}\n"
-                    f"#USER_JOINED\n"
-                    f"#𝙎𝙪𝙙𝙤_𝙐𝙨𝙚𝙧\n\n𝘽𝙚 𝙘𝙤𝙤𝙡 ! 𝘼 𝙢𝙚𝙢𝙗𝙚𝙧 𝙤𝙛 𝙩𝙝𝙚 𝙃𝙚𝙧𝙤𝙚𝙨 𝘼𝙨𝙨𝙤𝙘𝙞𝙖𝙩𝙞𝙤𝙣 𝙟𝙪𝙨𝙩 𝙟𝙤𝙞𝙣𝙚𝙙.\n𝘽𝙤𝙩 𝘿𝙀𝙑 𝙐𝙎𝙀𝙍𝙎 𝙐𝙨𝙚𝙧𝙨 𝙟𝙪𝙨𝙩 𝙟𝙤𝙞𝙣𝙚𝙙 𝙩𝙝𝙚 𝙜𝙧𝙤𝙪𝙥."
-                )
-                continue
+        elif new_mem.id in DEV_USERS:
+            update.effective_message.reply_text(
+                "#𝙎𝙪𝙙𝙤_𝙐𝙨𝙚𝙧\n\n𝘽𝙚 𝙘𝙤𝙤𝙡 ! 𝘼 𝙢𝙚𝙢𝙗𝙚𝙧 𝙤𝙛 𝙩𝙝𝙚 𝙃𝙚𝙧𝙤𝙚𝙨 𝘼𝙨𝙨𝙤𝙘𝙞𝙖𝙩𝙞𝙤𝙣 𝙟𝙪𝙨𝙩 𝙟𝙤𝙞𝙣𝙚𝙙.\n 𝘽𝙤𝙩 𝘿𝙀𝙑 𝙐𝙎𝙀𝙍𝙎 𝙐𝙨𝙚𝙧𝙨 𝙟𝙪𝙨𝙩 𝙟𝙤𝙞𝙣𝙚𝙙 𝙩𝙝𝙚 𝙜𝙧𝙤𝙪𝙥.",
+                reply_to_message_id=reply,
+            )
+            welcome_log = (
+                f"{html.escape(chat.title)}\n"
+                f"#USER_JOINED\n"
+                f"#𝙎𝙪𝙙𝙤_𝙐𝙨𝙚𝙧\n\n𝘽𝙚 𝙘𝙤𝙤𝙡 ! 𝘼 𝙢𝙚𝙢𝙗𝙚𝙧 𝙤𝙛 𝙩𝙝𝙚 𝙃𝙚𝙧𝙤𝙚𝙨 𝘼𝙨𝙨𝙤𝙘𝙞𝙖𝙩𝙞𝙤𝙣 𝙟𝙪𝙨𝙩 𝙟𝙤𝙞𝙣𝙚𝙙.\n𝘽𝙤𝙩 𝘿𝙀𝙑 𝙐𝙎𝙀𝙍𝙎 𝙐𝙨𝙚𝙧𝙨 𝙟𝙪𝙨𝙩 𝙟𝙤𝙞𝙣𝙚𝙙 𝙩𝙝𝙚 𝙜𝙧𝙤𝙪𝙥."
+            )
+            continue
 
             # Welcome Sudos
             elif new_mem.id in DRAGONS:
