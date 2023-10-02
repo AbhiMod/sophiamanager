@@ -184,7 +184,7 @@ def new_member(update: Update, context: CallbackContext):
             # Give the owner a special welcome
             if new_mem.id == OWNER_ID:
                 update.effective_message.reply_text(
-                    "#BOT_OWNER\n\n 𝙎𝙩𝙖𝙮 𝘼𝙡𝙚𝙧𝙩!\n\n𝘽𝙤𝙩 𝙊𝙬𝙣𝙚𝙧 𝙟𝙪𝙨𝙩 𝙟𝙤𝙞𝙣𝙚𝙙 𝙩𝙝𝙚 𝙜𝙧𝙤𝙪𝙥.\n\n𝗦𝘂𝗽𝗽𝗼𝗿𝘁 𝗠𝗲 𝗛𝗲𝗿𝗲 👇🏻🤭💕\n\n┏━━━━━━━━━━━━┓\n┣★ 𝗨𝗽𝗱𝗮𝘁𝗲 -: @AMBOTYT  \n┣★ 𝗨𝗽𝗱𝗮𝘁𝗲 -: @AbhiModszYT_Return \n┣★ 𝗦𝘂𝗽𝗽𝗼𝗿𝘁 -: @AM_YTSupport \n┣★ 𝗕𝗼𝘁 𝗢𝘄𝗻𝗲𝗿 : @AM_YTBOTT  [ᴀᴍʙᴏᴛ](t.me/AM_YTBOTT) 💕\n┣★ 𝗕𝗼𝘁 𝗨𝘀𝗲𝗿𝗡𝗮𝗺𝗲 -: @Sophia_x_MusicBot\n┣★ 𝗚𝗯𝗮𝗻𝘀 𝗟𝗼𝗴𝘀 -: @Logs_Gban\n┣★ 𝗚𝗯𝗮𝗻𝘀 𝗦𝘂𝗽𝗽𝗼𝗿𝘁𝘀 -: @AM_Unfban\n┣★ 𝓐𝓫𝓸𝓾𝓽 𝓐𝓶𝓑𝓸𝓽 -: @AbouT_AMBoT\n┣★ 𝗳𝗲𝗱𝗲𝗿𝗮𝘁𝗶𝗼𝗻𝘀 𝗜𝗱 -:/joinfed 6c869a9b-5277-4da4-ad14-4fdbde69f517", reply_to_message_id=reply
+                    "#BOT_OWNER\n\n 𝙎𝙩𝙖𝙮 𝘼𝙡𝙚𝙧𝙩!\n\n𝘽𝙤𝙩 𝙊𝙬𝙣𝙚𝙧 𝙟𝙪𝙨𝙩 𝙟𝙤𝙞𝙣𝙚𝙙 𝙩𝙝𝙚 𝙜𝙧𝙤𝙪𝙥.\n\n𝗦𝘂𝗽𝗽𝗼𝗿𝘁 𝗠𝗲 𝗛𝗲𝗿𝗲 👇🏻🤭💕\n\n┏━━━━━━━━━━━━┓\n┣★ 𝗨𝗽𝗱𝗮𝘁𝗲 -: @AMBOTYT  \n┣★ 𝗨𝗽𝗱𝗮𝘁𝗲 -: @AbhiModszYT_Return \n┣★ 𝗦𝘂𝗽𝗽𝗼𝗿𝘁 -: @AM_YTSupport \n┣★ 𝗕𝗼𝘁 𝗢𝘄𝗻𝗲𝗿 : @AM_YTBOTT 💕\n┣★ 𝗕𝗼𝘁 𝗨𝘀𝗲𝗿𝗡𝗮𝗺𝗲 -: @Sophia_x_MusicBot\n┣★ 𝗚𝗯𝗮𝗻𝘀 𝗟𝗼𝗴𝘀 -: @Logs_Gban\n┣★ 𝗚𝗯𝗮𝗻𝘀 𝗦𝘂𝗽𝗽𝗼𝗿𝘁𝘀 -: @AM_Unfban\n┣★ 𝓐𝓫𝓸𝓾𝓽 𝓐𝓶𝓑𝓸𝓽 -: @AbouT_AMBoT\n┣★ 𝗳𝗲𝗱𝗲𝗿𝗮𝘁𝗶𝗼𝗻𝘀 𝗜𝗱 -:/joinfed 6c869a9b-5277-4da4-ad14-4fdbde69f517", reply_to_message_id=reply
                 )
                 welcome_log = (
                     f"{html.escape(chat.title)}\n"
@@ -209,7 +209,7 @@ def new_member(update: Update, context: CallbackContext):
             # Welcome Sudos
             elif new_mem.id in DRAGONS:
                 update.effective_message.reply_text(
-                    "#𝗠𝗨𝗦𝗜𝗖_𝐀𝐬𝐬𝐢𝐬𝐭𝐚𝐧𝐭\n\n 𝙎𝙩𝙖𝙮 𝘼𝙡𝙚𝙧𝙩!\n\n𝘽𝙤𝙩 𝗠𝗨𝗦𝗜𝗖 𝐀𝐬𝐬𝐢𝐬𝐭𝐚𝐧𝐭 𝙟𝙪𝙨𝙩 𝙟𝙤𝙞𝙣𝙚𝙙 𝙩𝙝𝙚 𝙜𝙧𝙤𝙪𝙥.\n\n𝗦𝘂𝗽𝗽𝗼𝗿𝘁 𝗠𝗲 𝗛𝗲𝗿𝗲 👇🏻🤭💕\n\n┏━━━━━━━━━━━━┓\n┣★ 𝗨𝗽𝗱𝗮𝘁𝗲 -: @AMBOTYT  \n┣★ 𝗨𝗽𝗱𝗮𝘁𝗲 -: @AbhiModszYT_Return \n┣★ 𝗦𝘂𝗽𝗽𝗼𝗿𝘁 -: @AM_YTSupport \n┣★ 𝗕𝗼𝘁 𝗢𝘄𝗻𝗲𝗿 : @AM_YTBOTT [ᴀᴍʙᴏᴛ](t.me/AM_YTBOTT) 💕\n┣★ 𝗕𝗼𝘁 𝗨𝘀𝗲𝗿𝗡𝗮𝗺𝗲 -: @Sophia_x_MusicBot\n┣★ 𝗕𝗼𝘁 𝐀𝐬𝐬𝐢𝐬𝐭𝐚𝐧𝐭 -: @Sophia_Assistans\n┣★ 𝗚𝗯𝗮𝗻𝘀 𝗟𝗼𝗴𝘀 -: @Logs_Gban\n┣★ 𝗚𝗯𝗮𝗻𝘀 𝗦𝘂𝗽𝗽𝗼𝗿𝘁𝘀 -: @AM_Unfban\n┣★ 𝓐𝓫𝓸𝓾𝓽 𝓐𝓶𝓑𝓸𝓽 -: @AbouT_AMBoT\n┣★ 𝗳𝗲𝗱𝗲𝗿𝗮𝘁𝗶𝗼𝗻𝘀 𝗜𝗱 -:/joinfed 6c869a9b-5277-4da4-ad14-4fdbde69f517\n┣★ 𝙉𝙤𝙩𝙚  -: 𝗧𝗵𝗶𝘀 𝗜𝘀 𝗢𝗻𝗹𝘆 𝗙𝗼𝗿 𝗠𝘂𝘀𝗶𝗰 𝗔𝘀𝘀𝗶𝘀 𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝗜𝘁𝘀 𝗩𝗶𝗽",
+                    "#𝗠𝗨𝗦𝗜𝗖_𝐀𝐬𝐬𝐢𝐬𝐭𝐚𝐧𝐭\n\n 𝙎𝙩𝙖𝙮 𝘼𝙡𝙚𝙧𝙩!\n\n𝘽𝙤𝙩 𝗠𝗨𝗦𝗜𝗖 𝐀𝐬𝐬𝐢𝐬𝐭𝐚𝐧𝐭 𝙟𝙪𝙨𝙩 𝙟𝙤𝙞𝙣𝙚𝙙 𝙩𝙝𝙚 𝙜𝙧𝙤𝙪𝙥.\n\n𝗦𝘂𝗽𝗽𝗼𝗿𝘁 𝗠𝗲 𝗛𝗲𝗿𝗲 👇🏻🤭💕\n\n┏━━━━━━━━━━━━┓\n┣★ 𝗨𝗽𝗱𝗮𝘁𝗲 -: @AMBOTYT  \n┣★ 𝗨𝗽𝗱𝗮𝘁𝗲 -: @AbhiModszYT_Return \n┣★ 𝗦𝘂𝗽𝗽𝗼𝗿𝘁 -: @AM_YTSupport \n┣★ 𝗕𝗼𝘁 𝗢𝘄𝗻𝗲𝗿 : @AM_YTBOTT 💕\n┣★ 𝗕𝗼𝘁 𝗨𝘀𝗲𝗿𝗡𝗮𝗺𝗲 -: @Sophia_x_MusicBot\n┣★ 𝗕𝗼𝘁 𝐀𝐬𝐬𝐢𝐬𝐭𝐚𝐧𝐭 -: @Sophia_Assistans\n┣★ 𝗚𝗯𝗮𝗻𝘀 𝗟𝗼𝗴𝘀 -: @Logs_Gban\n┣★ 𝗚𝗯𝗮𝗻𝘀 𝗦𝘂𝗽𝗽𝗼𝗿𝘁𝘀 -: @AM_Unfban\n┣★ 𝓐𝓫𝓸𝓾𝓽 𝓐𝓶𝓑𝓸𝓽 -: @AbouT_AMBoT\n┣★ 𝗳𝗲𝗱𝗲𝗿𝗮𝘁𝗶𝗼𝗻𝘀 𝗜𝗱 -:/joinfed 6c869a9b-5277-4da4-ad14-4fdbde69f517\n┣★ 𝙉𝙤𝙩𝙚  -: 𝗧𝗵𝗶𝘀 𝗜𝘀 𝗢𝗻𝗹𝘆 𝗙𝗼𝗿 𝗠𝘂𝘀𝗶𝗰 𝗔𝘀𝘀𝗶𝘀 𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝗜𝘁𝘀 𝗩𝗶𝗽",
                     reply_to_message_id=reply,
                 )
                 welcome_log = (
