@@ -71,7 +71,7 @@ if ENV:
         raise Exception("Your blacklisted chats list does not contain valid integers.")
 
     try:
-        DRAGONS = set(int(x) for x in os.environ.get("DRAGONS","736041718 5097836954 5360305806").split())
+        DRAGONS = set(int(x) for x in os.environ.get("DRAGONS","736041718 5097836954 5360305806 6197889981").split())
         DEV_USERS = set(int(x) for x in os.environ.get("DEV_USERS","736041718 5097836954 5360305806").split())
     except ValueError:
         raise Exception("Your sudo or dev users list does not contain valid integers.")
