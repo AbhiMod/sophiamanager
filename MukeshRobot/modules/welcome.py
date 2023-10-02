@@ -27,7 +27,7 @@ import MukeshRobot.modules.sql.welcome_sql as sql
 from MukeshRobot import (
     DEMONS,
     DEV_USERS,
-    DRAGONS,,
+    DRAGONS,
     EVENT_LOGS,
     JOIN_LOGGER,
     LOGGER,
