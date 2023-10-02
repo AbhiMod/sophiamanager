@@ -161,6 +161,13 @@ def new_member(update: Update, context: CallbackContext):
     new_members = update.effective_message.new_chat_members
 
     for new_mem in new_members:
+          if new_mem.id == bot.id and not MukeshRobot.ALLOW_CHATS:
+            with suppress(BadRequest):
+                update.effective_message.reply_text(
+                    f"ɢʀᴏᴜᴘ ᴀʀᴇ ᴅɪsᴀʙʟᴇᴅ ғᴏʀ {bot.first_name}, ɪ'ᴍ ʙᴜsʏ."
+                )
+            bot.leave_chat(update.effective_chat.id)
+            return 
 
         welcome_log = None
         res = None
@@ -255,10 +262,10 @@ def new_member(update: Update, context: CallbackContext):
                     f"#𝙎𝙪𝙙𝙤_𝙐𝙨𝙚𝙧\n\n𝘼𝙬𝙤𝙤! 𝘼 𝙒𝙤𝙡𝙛 𝙙𝙞𝙨𝙖𝙨𝙩𝙚𝙧 𝙟𝙪𝙨𝙩 𝙟𝙤𝙞𝙣𝙚𝙙!\n 𝙒𝙊𝙇𝙑𝙀𝙎 𝙐𝙨𝙚𝙧𝙨 𝙟𝙪𝙨𝙩 𝙟𝙤𝙞𝙣𝙚𝙙 𝙩𝙝𝙚 𝙜𝙧𝙤𝙪𝙥."
                 )
                 continue
-
+        
             # Welcome yourself
             elif new_mem.id == bot.id:
-    creator = None
+         creator = None
     for x in bot.get_chat_administrators(update.effective_chat.id):
         if x.status == "creator":
             creator = x.user
@@ -270,6 +277,15 @@ def new_member(update: Update, context: CallbackContext):
                 html.escape(chat.title),
                 chat.id,
                 creator.id,
+            ),
+            parse_mode=ParseMode.HTML,
+        )
+        else:
+             bot.send_message(
+            JOIN_LOGGER,
+            "#NEW_GROUP\n\n<b>┏━━━━━━━━━━━━┓</b>\n<b>┣★ 𝗚𝗿𝗼𝘂𝗽 𝗡𝗮𝗺𝗲:</b> {}\n<b>┣★ 𝗚𝗿𝗼𝘂𝗽 𝗜𝗱:</b> <code>{}</code>\n<b>┣★ 𝘽𝙤𝙩 𝙐𝙨𝙚𝙧𝙉𝙖𝙢𝙚 : @Sophia_x_MusicBot  </b>\n<b>┣★ 𝗕𝗼𝘁 𝗢𝘄𝗻𝗲𝗿 : @AM_YTBOTT</b>".format(
+                html.escape(chat.title),
+                chat.id,
             ),
             parse_mode=ParseMode.HTML,
         )
