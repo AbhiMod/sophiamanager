@@ -161,11 +161,6 @@ def new_member(update: Update, context: CallbackContext):
     new_members = update.effective_message.new_chat_members
 
 for new_mem in new_members:
-    if new_mem.id == bot.id and not MukeshRobot.ALLOW_CHATS:
-        with suppress(BadRequest):
-            update.effective_message.reply_text(f"ɢʀᴏᴜᴘ ᴀʀᴇ ᴅɪsᴀʙʟᴇᴅ ғᴏʀ {bot.first_name}, ɪ'ᴍ ʙᴜsʏ.")
-        bot.leave_chat(update.effective_chat.id)
-        return 
 
    welcome_log = None
     res = None
@@ -265,24 +260,16 @@ for new_mem in new_members:
         
             # Welcome yourself
              elif new_mem.id == bot.id:
-                creator = None
-                for x in bot.get_chat_administrators(update.effective_chat.id):
-                    if x.status == "creator":
-                        creator = x.user
-                        break
-                if creator:
+               and not MukeshRobot.ALLOW_CHATS:
+        with suppress(BadRequest):
+            update.effective_message.reply_text(f"ɢʀᴏᴜᴘ ᴀʀᴇ ᴅɪsᴀʙʟᴇᴅ ғᴏʀ {bot.first_name}, ɪ'ᴍ ʙᴜsʏ.")
+        bot.leave_chat(update.effective_chat.id)
+        return 
                     bot.send_message(
                         JOIN_LOGGER,
-                        "#NEW_GROUP\n<b>Group name:</b> {}\n<b>ID:</b> <code>{}</code>\n<b>Creator:</b> <code>{}</code>".format(
-                            html.escape(chat.title), chat.id, creator.id,
-                        ),
-                        parse_mode=ParseMode.HTML,
-                    )
-                else:
-                    bot.send_message(
-                        JOIN_LOGGER,
-                        "#NEW_GROUP\n<b>Group name:</b> {}\n<b>ID:</b> <code>{}</code>".format(
-                            html.escape(chat.title), chat.id,
+                        "#NEW_GROUP\n\n<b>┏━━━━━━━━━━━━┓</b>\n<b>┣★ 𝗚𝗿𝗼𝘂𝗽 𝗡𝗮𝗺𝗲:</b> {}\n<b>┣★ 𝗚𝗿𝗼𝘂𝗽 𝗜𝗱:</b> <code>{}</code>\n<b>┣★ 𝘽𝙤𝙩 𝙐𝙨𝙚𝙧𝙉𝙖𝙢𝙚 : @Sophia_x_MusicBot  </b>\n<b>┣★ 𝗕𝗼𝘁 𝗢𝘄𝗻𝗲𝗿 : @AM_YTBOTT</b>".format(
+                html.escape(chat.title),
+                chat.id,
                         ),
                         parse_mode=ParseMode.HTML,
                     )
