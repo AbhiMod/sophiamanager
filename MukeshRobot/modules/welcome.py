@@ -162,12 +162,6 @@ def new_member(update: Update, context: CallbackContext):
 
     for new_mem in new_members:
 
-         if new_mem.id == bot.id and not MukeshRobot.ALLOW_CHATS:
-            with suppress(BadRequest):
-                update.effective_message.reply_text(f"I cant join more groups now due to increasing userbase and load.\nAdd my friend @Sophia_x_MusicBot instead\n • Same Yone Code\n • Same Support\n • Same Updates channel\n\nPowered by @AMBOTYT")
-            bot.leave_chat(update.effective_chat.id)
-            return
-
         welcome_log = None
         res = None
         sent = None
