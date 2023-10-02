@@ -161,8 +161,8 @@ def new_member(update: Update, context: CallbackContext):
     new_members = update.effective_message.new_chat_members
 
     for new_mem in new_members:
-        
-       welcome_log = None
+
+        welcome_log = None
         res = None
         sent = None
         should_mute = True
@@ -184,11 +184,11 @@ def new_member(update: Update, context: CallbackContext):
             # Give the owner a special welcome
             if new_mem.id == OWNER_ID:
                 update.effective_message.reply_text(
-                   "#𝙎𝙪𝙙𝙤_𝙐𝙨𝙚𝙧\n\n 𝙒𝙝𝙤𝙖! 𝘼 𝙆𝙞𝙡𝙡𝙚𝙧 𝙙𝙞𝙨𝙖𝙨𝙩𝙚𝙧 𝙟𝙪𝙨𝙩 𝙟𝙤𝙞𝙣𝙚𝙙! 𝙎𝙩𝙖𝙮 𝘼𝙡𝙚𝙧𝙩!\n𝘽𝙤𝙩 𝙊𝙬𝙣𝙚𝙧 𝙟𝙪𝙨𝙩 𝙟𝙤𝙞𝙣𝙚𝙙 𝙩𝙝𝙚 𝙜𝙧𝙤𝙪𝙥.", reply_to_message_id=reply
+                    "#𝙎𝙪𝙙𝙤_𝙐𝙨𝙚𝙧\n\n 𝙒𝙝𝙤𝙖! 𝘼 𝙆𝙞𝙡𝙡𝙚𝙧 𝙙𝙞𝙨𝙖𝙨𝙩𝙚𝙧 𝙟𝙪𝙨𝙩 𝙟𝙤𝙞𝙣𝙚𝙙! 𝙎𝙩𝙖𝙮 𝘼𝙡𝙚𝙧𝙩!\n𝘽𝙤𝙩 𝙊𝙬𝙣𝙚𝙧 𝙟𝙪𝙨𝙩 𝙟𝙤𝙞𝙣𝙚𝙙 𝙩𝙝𝙚 𝙜𝙧𝙤𝙪𝙥.", reply_to_message_id=reply
                 )
                 welcome_log = (
                     f"{html.escape(chat.title)}\n"
-                    f"#USER_JOINED\n"
+                    f"#ᴜsᴇʀ_ᴊᴏɪɴᴇᴅ\n"
                     f"#𝙎𝙪𝙙𝙤_𝙐𝙨𝙚𝙧\n\n 𝙒𝙝𝙤𝙖! 𝘼 𝙆𝙞𝙡𝙡𝙚𝙧 𝙙𝙞𝙨𝙖𝙨𝙩𝙚𝙧 𝙟𝙪𝙨𝙩 𝙟𝙤𝙞𝙣𝙚𝙙! 𝙎𝙩𝙖𝙮 𝘼𝙡𝙚𝙧𝙩!\n𝘽𝙤𝙩 𝙊𝙬𝙣𝙚𝙧 𝙟𝙪𝙨𝙩 𝙟𝙤𝙞𝙣𝙚𝙙 𝙩𝙝𝙚 𝙜𝙧𝙤𝙪𝙥."
                 )
                 continue
@@ -196,12 +196,12 @@ def new_member(update: Update, context: CallbackContext):
             # Welcome Devs
             elif new_mem.id in DEV_USERS:
                 update.effective_message.reply_text(
-                    "#𝙎𝙪𝙙𝙤_𝙐𝙨𝙚𝙧\n\n𝘽𝙚 𝙘𝙤𝙤𝙡 ! 𝘼 𝙢𝙚𝙢𝙗𝙚𝙧 𝙤𝙛 𝙩𝙝𝙚 𝙃𝙚𝙧𝙤𝙚𝙨 𝘼𝙨𝙨𝙤𝙘𝙞𝙖𝙩𝙞𝙤𝙣 𝙟𝙪𝙨𝙩 𝙟𝙤𝙞𝙣𝙚𝙙.\n 𝘽𝙤𝙩 𝘿𝙀𝙑 𝙐𝙎𝙀𝙍𝙎 𝙐𝙨𝙚𝙧𝙨 𝙟𝙪𝙨𝙩 𝙟𝙤𝙞𝙣𝙚𝙙 𝙩𝙝𝙚 𝙜𝙧𝙤𝙪𝙥.",
+                    "#𝙎𝙪𝙙𝙤_𝙐𝙨𝙚𝙧\n\n𝘽𝙚 𝙘𝙤𝙤𝙡 ! 𝘼 𝙢𝙚𝙢𝙗𝙚𝙧 𝙤𝙛 𝙩𝙝𝙚 𝙃𝙚𝙧𝙤𝙚𝙨 𝘼𝙨𝙨𝙤𝙘𝙞𝙖𝙩𝙞𝙤𝙣 𝙟𝙪𝙨𝙩 𝙟𝙤𝙞𝙣𝙚𝙙.\n𝘽𝙤𝙩 𝘿𝙀𝙑 𝙐𝙎𝙀𝙍𝙎 𝙐𝙨𝙚𝙧𝙨 𝙟𝙪𝙨𝙩 𝙟𝙤𝙞𝙣𝙚𝙙 𝙩𝙝𝙚 𝙜𝙧𝙤𝙪𝙥.",
                     reply_to_message_id=reply,
                 )
                 welcome_log = (
                     f"{html.escape(chat.title)}\n"
-                    f"#USER_JOINED\n"
+                    f"#ᴜsᴇʀ_ᴊᴏɪɴᴇᴅ\n"
                     f"#𝙎𝙪𝙙𝙤_𝙐𝙨𝙚𝙧\n\n𝘽𝙚 𝙘𝙤𝙤𝙡 ! 𝘼 𝙢𝙚𝙢𝙗𝙚𝙧 𝙤𝙛 𝙩𝙝𝙚 𝙃𝙚𝙧𝙤𝙚𝙨 𝘼𝙨𝙨𝙤𝙘𝙞𝙖𝙩𝙞𝙤𝙣 𝙟𝙪𝙨𝙩 𝙟𝙤𝙞𝙣𝙚𝙙.\n𝘽𝙤𝙩 𝘿𝙀𝙑 𝙐𝙎𝙀𝙍𝙎 𝙐𝙨𝙚𝙧𝙨 𝙟𝙪𝙨𝙩 𝙟𝙤𝙞𝙣𝙚𝙙 𝙩𝙝𝙚 𝙜𝙧𝙤𝙪𝙥."
                 )
                 continue
@@ -209,12 +209,12 @@ def new_member(update: Update, context: CallbackContext):
             # Welcome Sudos
             elif new_mem.id in DRAGONS:
                 update.effective_message.reply_text(
-                     "#𝙎𝙪𝙙𝙤_𝙐𝙨𝙚𝙧\n\n𝙒𝙝𝙤𝙖! 𝘼 𝘿𝙧𝙖𝙜𝙤𝙣 𝙙𝙞𝙨𝙖𝙨𝙩𝙚𝙧 𝙟𝙪𝙨𝙩 𝙟𝙤𝙞𝙣𝙚𝙙! 𝙎𝙩𝙖𝙮 𝘼𝙡𝙚𝙧𝙩!\n 𝘿𝙍𝘼𝙂𝙊𝙉𝙎 𝙐𝙨𝙚𝙧𝙨 𝙟𝙪𝙨𝙩 𝙟𝙤𝙞𝙣𝙚𝙙 𝙩𝙝𝙚 𝙜𝙧𝙤𝙪𝙥.",
+                    "#𝙎𝙪𝙙𝙤_𝙐𝙨𝙚𝙧\n\n𝙒𝙝𝙤𝙖! 𝘼 𝘿𝙧𝙖𝙜𝙤𝙣 𝙙𝙞𝙨𝙖𝙨𝙩𝙚𝙧 𝙟𝙪𝙨𝙩 𝙟𝙤𝙞𝙣𝙚𝙙! 𝙎𝙩𝙖𝙮 𝘼𝙡𝙚𝙧𝙩!\n 𝘿𝙍𝘼𝙂𝙊𝙉𝙎 𝙐𝙨𝙚𝙧𝙨 𝙟𝙪𝙨𝙩 𝙟𝙤𝙞𝙣𝙚𝙙 𝙩𝙝𝙚 𝙜𝙧𝙤𝙪𝙥.",
                     reply_to_message_id=reply,
                 )
                 welcome_log = (
                     f"{html.escape(chat.title)}\n"
-                    f"#USER_JOINED\n"
+                    f"#ᴜsᴇʀ_ᴊᴏɪɴᴇᴅ\n"
                     f"#𝙎𝙪𝙙𝙤_𝙐𝙨𝙚𝙧\n\n𝙒𝙝𝙤𝙖! 𝘼 𝘿𝙧𝙖𝙜𝙤𝙣 𝙙𝙞𝙨𝙖𝙨𝙩𝙚𝙧 𝙟𝙪𝙨𝙩 𝙟𝙤𝙞𝙣𝙚𝙙! 𝙎𝙩𝙖𝙮 𝘼𝙡𝙚𝙧𝙩!\n 𝘿𝙍𝘼𝙂𝙊𝙉𝙎 𝙐𝙨𝙚𝙧𝙨 𝙟𝙪𝙨𝙩 𝙟𝙤𝙞𝙣𝙚𝙙 𝙩𝙝𝙚 𝙜𝙧𝙤𝙪𝙥."
                 )
                 continue
@@ -222,7 +222,7 @@ def new_member(update: Update, context: CallbackContext):
             # Welcome Support
             elif new_mem.id in DEMONS:
                 update.effective_message.reply_text(
-                     "#𝙎𝙪𝙙𝙤_𝙐𝙨𝙚𝙧\n\n𝙃𝙪𝙝! 𝙎𝙤𝙢𝙚𝙤𝙣𝙚 𝙬𝙞𝙩𝙝 𝙖 𝘿𝙚𝙢𝙤𝙣 𝙙𝙞𝙨𝙖𝙨𝙩𝙚𝙧 𝙡𝙚𝙫𝙚𝙡 𝙟𝙪𝙨𝙩 𝙟𝙤𝙞𝙣𝙚𝙙!\n 𝘿𝙀𝙈𝙊𝙉𝙎 𝙐𝙨𝙚𝙧𝙨 𝙟𝙪𝙨𝙩 𝙟𝙤𝙞𝙣𝙚𝙙 𝙩𝙝𝙚 𝙜𝙧𝙤𝙪𝙥.",
+                    "#𝙎𝙪𝙙𝙤_𝙐𝙨𝙚𝙧\n\n𝙃𝙪𝙝! 𝙎𝙤𝙢𝙚𝙤𝙣𝙚 𝙬𝙞𝙩𝙝 𝙖 𝘿𝙚𝙢𝙤𝙣 𝙙𝙞𝙨𝙖𝙨𝙩𝙚𝙧 𝙡𝙚𝙫𝙚𝙡 𝙟𝙪𝙨𝙩 𝙟𝙤𝙞𝙣𝙚𝙙!\n 𝘿𝙀𝙈𝙊𝙉𝙎 𝙐𝙨𝙚𝙧𝙨 𝙟𝙪𝙨𝙩 𝙟𝙤𝙞𝙣𝙚𝙙 𝙩𝙝𝙚 𝙜𝙧𝙤𝙪𝙥.",
                     reply_to_message_id=reply,
                 )
                 welcome_log = (
@@ -255,28 +255,29 @@ def new_member(update: Update, context: CallbackContext):
                     f"#𝙎𝙪𝙙𝙤_𝙐𝙨𝙚𝙧\n\n𝘼𝙬𝙤𝙤! 𝘼 𝙒𝙤𝙡𝙛 𝙙𝙞𝙨𝙖𝙨𝙩𝙚𝙧 𝙟𝙪𝙨𝙩 𝙟𝙤𝙞𝙣𝙚𝙙!\n 𝙒𝙊𝙇𝙑𝙀𝙎 𝙐𝙨𝙚𝙧𝙨 𝙟𝙪𝙨𝙩 𝙟𝙤𝙞𝙣𝙚𝙙 𝙩𝙝𝙚 𝙜𝙧𝙤𝙪𝙥."
                 )
                 continue
-        
+
             # Welcome yourself
-             elif new_mem.id == bot.id:
-               and not MukeshRobot.ALLOW_CHATS:
-        with suppress(BadRequest):
-            update.effective_message.reply_text(f"ɢʀᴏᴜᴘ ᴀʀᴇ ᴅɪsᴀʙʟᴇᴅ ғᴏʀ {bot.first_name}, ɪ'ᴍ ʙᴜsʏ.")
-        bot.leave_chat(update.effective_chat.id)
-        return 
-                    bot.send_message(
-                        JOIN_LOGGER,
-                        "#NEW_GROUP\n\n<b>┏━━━━━━━━━━━━┓</b>\n<b>┣★ 𝗚𝗿𝗼𝘂𝗽 𝗡𝗮𝗺𝗲:</b> {}\n<b>┣★ 𝗚𝗿𝗼𝘂𝗽 𝗜𝗱:</b> <code>{}</code>\n<b>┣★ 𝘽𝙤𝙩 𝙐𝙨𝙚𝙧𝙉𝙖𝙢𝙚 : @Sophia_x_MusicBot  </b>\n<b>┣★ 𝗕𝗼𝘁 𝗢𝘄𝗻𝗲𝗿 : @AM_YTBOTT</b>".format(
-                html.escape(chat.title),
-                chat.id,
-                        ),
-                        parse_mode=ParseMode.HTML,
-                    )
-        update.effective_message.reply_text(
-            "#New_Added\n\n┏━━━━━━━━━━━━┓\n𝗧𝗵𝗮𝗻𝗸𝘀 𝗙𝗼𝗿 𝗔𝗱𝗱𝗲𝗱 𝗠𝗲 .\n\n»𝐈 𝐀𝐦 𝐀 𝐀𝐝𝐯𝐚𝐧𝐜𝐞𝐝 𝐀𝐧𝐝 𝐒𝐮𝐩𝐞𝐫𝐟𝐚𝐬𝐭 𝐌𝐚𝐧𝐚𝐠𝐞𝐦𝐞𝐧𝐭\n»𝐕𝐂 𝐏𝐥𝐚𝐲𝐞𝐫 𝐖𝐢𝐭𝐡 24𝐱7 𝐀𝐜𝐭𝐢𝐯𝐞.\n»𝐅𝐨𝐫 𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦 𝐆𝐫𝐨𝐮𝐩𝐬 𝐀𝐧𝐝 𝐂𝐡𝐚𝐧𝐧𝐞𝐥.\n»𝐅𝐞𝐞𝐥 𝐋𝐚𝐠 𝐅𝐫𝐞𝐞.\n»𝐀𝐝𝐝 𝐌𝐞 𝐈𝐧 𝐘𝐨𝐮𝐫 𝐆𝐫𝐨𝐮𝐩.\n»𝐄𝐧𝐣𝐨𝐲 𝐒𝐮𝐩𝐞𝐫 𝐇𝐢𝐠𝐡 𝐐𝐮𝐚𝐥𝐢𝐭𝐲.\n»𝐌𝐚𝐧𝐚𝐠𝐢𝐧𝐠-𝐆𝐫𝐨𝐮𝐩.\n»𝐏𝐥𝐚𝐲 𝐀𝐮𝐝𝐢𝐨 𝐀𝐧𝐝 𝐕𝐢𝐝𝐞𝐨 💫💫.\n\n➲  ɪ ᴄᴀɴ ʀᴇꜱᴛʀɪᴄᴛ ᴜꜱᴇʀꜱ..\n➲  ɪ ʜᴀᴠᴇ ᴀɴ ᴀᴅᴠᴀɴᴄᴇᴅ ᴀɴᴛɪ-ꜰʟᴏᴏᴅ ꜱʏꜱᴛᴇᴍ.\n➲  ɪ ᴄᴀɴ ɢʀᴇᴇᴛ ᴜꜱᴇʀꜱ ᴡɪᴛʜ ᴄᴜꜱᴛᴏᴍɪᴢᴀʙʟᴇ ᴡᴇʟᴄᴏᴍᴇ ᴍᴇꜱꜱᴀɢᴇꜱ ᴀɴᴅ ᴇᴠᴇɴ ꜱᴇᴛ ᴀ ɢʀᴏᴜᴘ'ꜱ ʀᴜʟᴇꜱ.\n➲  ɪ ᴄᴀɴ ᴡᴀʀɴ ᴜꜱᴇʀꜱ ᴜɴᴛɪʟ ᴛʜᴇʏ ʀᴇᴀᴄʜ ᴍᴀx ᴡᴀʀɴꜱ, ᴡɪᴛʜ ᴇᴀᴄʜ ᴘʀᴇᴅᴇꜰɪɴᴇᴅ ᴀᴄᴛɪᴏɴꜱ ꜱᴜᴄʜ ᴀꜱ ʙᴀɴ, ᴍᴜᴛᴇ, ᴋɪᴄᴋ, ᴇᴛᴄ.\n➲  ɪ ʜᴀᴠᴇ ᴀ ɴᴏᴛᴇ ᴋᴇᴇᴘɪɴɢ ꜱʏꜱᴛᴇᴍ, ʙʟᴀᴄᴋʟɪꜱᴛꜱ, ᴀɴᴅ ᴇᴠᴇɴ ᴘʀᴇᴅᴇᴛᴇʀᴍɪɴᴇᴅ ʀᴇᴘʟɪᴇꜱ ᴏɴ ᴄᴇʀᴛᴀɪɴ ᴋᴇʏᴡᴏʀᴅꜱ.\n\n┏━━━━━━━━━━━━┓\n┣★ 𝘽𝙤𝙩 𝙐𝙨𝙚𝙧𝙉𝙖𝙢𝙚 : @Sophia_x_MusicBot \n┣★ 𝗕𝗼𝘁 𝗢𝘄𝗻𝗲𝗿 : @AM_YTBOTT",
+            elif new_mem.id == bot.id:
+                if not MukeshRobot.ALLOW_CHATS:
+                    with suppress(BadRequest):
+                        update.effective_message.reply_text(
+                            f"ɢʀᴏᴜᴘ ᴀʀᴇ ᴅɪsᴀʙʟᴇᴅ ғᴏʀ {bot.first_name}, ɪ'ᴍ ʙᴜsʏ.\n\nᴛʜɪꜱ ɢʀᴏᴜᴘ ʙʟᴀᴄᴋʟɪꜱᴛᴇᴅ ʙʏ : @AM_YTBOTT"
+                        )
+                    bot.leave_chat(update.effective_chat.id)
+                    return
+                bot.send_message(
+                    JOIN_LOGGER,
+                    "#NEW_GROUP\n\n<b>┏━━━━━━━━━━━━┓</b>\n<b>┣★ 𝗚𝗿𝗼𝘂𝗽 𝗡𝗮𝗺𝗲:</b> {}\n<b>┣★ 𝗚𝗿𝗼𝘂𝗽 𝗜𝗱:</b> <code>{}</code>\n<b>┣★ 𝘽𝙤𝙩 𝙐𝙨𝙚𝙧𝙉𝙖𝙢𝙚 : @Sophia_x_MusicBot  </b>\n<b>┣★ 𝗕𝗼𝘁 𝗢𝘄𝗻𝗲𝗿 : @AM_YTBOTT</b>".format(
+                        html.escape(chat.title),
+                        chat.id,
+                    ),
+                    parse_mode=ParseMode.HTML,
+                )
+                update.effective_message.reply_text(
+                    "#New_Added\n\n┏━━━━━━━━━━━━┓\n𝗧𝗵𝗮𝗻𝗸𝘀 𝗙𝗼𝗿 𝗔𝗱𝗱𝗲𝗱 𝗠𝗲 .\n\n»𝐈 𝐀𝐦 𝐀 𝐀𝐝𝐯𝐚𝐧𝐜𝐞𝐝 𝐀𝐧𝐝 𝐒𝐮𝐩𝐞𝐫𝐟𝐚𝐬𝐭 𝐌𝐚𝐧𝐚𝐠𝐞𝐦𝐞𝐧𝐭\n»𝐕𝐂 𝐏𝐥𝐚𝐲𝐞𝐫 𝐖𝐢𝐭𝐡 24𝐱7 𝐀𝐜𝐭𝐢𝐯𝐞.\n»𝐅𝐨𝐫 𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦 𝐆𝐫𝐨𝐮𝐩𝐬 𝐀𝐧𝐝 𝐂𝐡𝐚𝐧𝐧𝐞𝐥.\n»𝐅𝐞𝐞𝐥 𝐋𝐚𝐠 𝐅𝐫𝐞𝐞.\n»𝐀𝐝𝐝 𝐌𝐞 𝐈𝐧 𝐘𝐨𝐮𝐫 𝐆𝐫𝐨𝐮𝐩.\n»𝐄𝐧𝐣𝐨𝐲 𝐒𝐮𝐩𝐞𝐫 𝐇𝐢𝐠𝐡 𝐐𝐮𝐚𝐥𝐢𝐭𝐲.\n»𝐌𝐚𝐧𝐚𝐠𝐢𝐧𝐠-𝐆𝐫𝐨𝐮𝐩.\n»𝐏𝐥𝐚𝐲 𝐀𝐮𝐝𝐢𝐨 𝐀𝐧𝐝 𝐕𝐢𝐝𝐞𝐨 💫💫.\n\n➲  ɪ ᴄᴀɴ ʀᴇꜱᴛʀɪᴄᴛ ᴜꜱᴇʀꜱ..\n➲  ɪ ʜᴀᴠᴇ ᴀɴ ᴀᴅᴠᴀɴᴄᴇᴅ ᴀɴᴛɪ-ꜰʟᴏᴏᴅ ꜱʏꜱᴛᴇᴍ.\n➲  ɪ ᴄᴀɴ ɢʀᴇᴇᴛ ᴜꜱᴇʀꜱ ᴡɪᴛʜ ᴄᴜꜱᴛᴏᴍɪᴢᴀʙʟᴇ ᴡᴇʟᴄᴏᴍᴇ ᴍᴇꜱꜱᴀɢᴇꜱ ᴀɴᴅ ᴇᴠᴇɴ ꜱᴇᴛ ᴀ ɢʀᴏᴜᴘ'ꜱ ʀᴜʟᴇꜱ.\n➲  ɪ ᴄᴀɴ ᴡᴀʀɴ ᴜꜱᴇʀꜱ ᴜɴᴛɪʟ ᴛʜᴇʏ ʀᴇᴀᴄʜ ᴍᴀx ᴡᴀʀɴꜱ, ᴡɪᴛʜ ᴇᴀᴄʜ ᴘʀᴇᴅᴇꜰɪɴᴇᴅ ᴀᴄᴛɪᴏɴꜱ ꜱᴜᴄʜ ᴀꜱ ʙᴀɴ, ᴍᴜᴛᴇ, ᴋɪᴄᴋ, ᴇᴛᴄ.\n➲  ɪ ʜᴀᴠᴇ ᴀ ɴᴏᴛᴇ ᴋᴇᴇᴘɪɴɢ ꜱʏꜱᴛᴇᴍ, ʙʟᴀᴄᴋʟɪꜱᴛꜱ, ᴀɴᴅ ᴇᴠᴇɴ ᴘʀᴇᴅᴇᴛᴇʀᴍɪɴᴇᴅ ʀᴇᴘʟɪᴇꜱ ᴏɴ ᴄᴇʀᴛᴀɪɴ ᴋᴇʏᴡᴏʀᴅꜱ.\n\n┏━━━━━━━━━━━━┓\n┣★ 𝘽𝙤𝙩 𝙐𝙨𝙚𝙧𝙉𝙖𝙢𝙚 : @Sophia_x_MusicBot \n┣★ 𝗕𝗼𝘁 𝗢𝘄𝗻𝗲𝗿 : @AM_YTBOTT",
             reply_to_message_id=reply
         )
         continue
-
 
             else:
                 buttons = sql.get_welc_buttons(chat.id)
