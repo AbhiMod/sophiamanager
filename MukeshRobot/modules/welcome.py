@@ -279,12 +279,13 @@ def new_member(update: Update, context: CallbackContext):
         )
         continue
 
-            else:
+         else:
                 buttons = sql.get_welc_buttons(chat.id)
                 keyb = build_keyboard(buttons)
 
                 if welc_type not in (sql.Types.TEXT, sql.Types.BUTTON_TEXT):
                     media_wel = True
+
 
                 first_name = (
                     new_mem.first_name or "PersonWithNoName"
