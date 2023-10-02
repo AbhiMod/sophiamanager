@@ -162,8 +162,7 @@ def new_member(update: Update, context: CallbackContext):
 
     for new_mem in new_members:
 
-        if new_mem.id == bot.id:
-            if not MukeshRobot.ALLOW_CHATS:
+        if new_mem.id == bot.id: and not MukeshRobot.ALLOW_CHATS:
             with suppress(BadRequest):
                 update.effective_message.reply_text(
                     f"I cant join more groups now due to increasing userbase and load.\nAdd my friend {bot.first_name} instead\n • Same Yone Code\n • Same Support\n • Same Updates channel\n\nPowered by @AMBOTYT, ɪ'ᴍ ʙᴜsʏ."
