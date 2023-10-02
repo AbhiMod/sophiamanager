@@ -477,7 +477,7 @@ def Mukesh_about_callback(update: Update, context: CallbackContext):
      ],
                     [
                         InlineKeyboardButton(
-                            text="🏡 sᴜᴩᴩᴏʀᴛ", url=f"https://t.me/{SUPPORT_CHAT}"
+                            text="𝘍𝘳𝘪𝘦𝘯𝘥𝘴𝘚𝘩𝘪𝘱𝘊𝘪𝘳𝘤𝘭𝘦 💌", url=f"https://t.me/{SUPPORT_CHAT}"
                         ),
                         InlineKeyboardButton(
                             text="ᴜᴩᴅᴀᴛᴇs 🍷", url=f"\x68\x74\x74\x70\x73\x3a\x2f\x2f\x74\x2e\x6d\x65\x2f\x41\x6d\x42\x6f\x74\x59\x54"
@@ -860,7 +860,7 @@ c ꜱᴛᴀɴᴅꜱ ꜰᴏʀ ᴄʜᴀɴɴᴇʟ ᴘʟᴀʏ.
 /settings - ɢᴇᴛ a ᴄᴏᴍᴘʟᴇᴛᴇ ɢʀᴏᴜᴘ ꜱᴇᴛᴛɪɴɢꜱ ᴡɪᴛʜ ɪɴʟɪɴᴇ ʙᴜᴛᴛᴏɴꜱ
 
 *ꜱᴏᴅᴏ ᴜꜱᴇʀꜱ:*
-ᴇxᴀᴍᴩʟᴇ: `/broadcast -user -assistant -pin` - broadcast
+ᴇxᴀᴍᴩʟᴇ:/broadcast -user -assistant -pin - broadcast
 /gcast - boradcast 
 `/logger enable`
 
