@@ -279,7 +279,7 @@ def new_member(update: Update, context: CallbackContext):
         )
         continue
 
-         else:
+            else:
                 buttons = sql.get_welc_buttons(chat.id)
                 keyb = build_keyboard(buttons)
 
