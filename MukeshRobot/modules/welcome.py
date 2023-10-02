@@ -160,28 +160,26 @@ def new_member(update: Update, context: CallbackContext):
 
     new_members = update.effective_message.new_chat_members
 
-for new_mem in new_members:
+    for new_mem in new_members:
 
-   welcome_log = None
-    res = None
-    sent = None
-    should_mute = True
-    welcome_bool = True
-    media_wel = False
+        welcome_log = None
+        res = None
+        sent = None
+        should_mute = True
+        welcome_bool = True
+        media_wel = False
 
-    if should_welc:
+        if should_welc:
 
-  
-        reply = update.message.message_id
-        cleanserv = sql.clean_service(chat.id)
-            
+            reply = update.message.message_id
+            cleanserv = sql.clean_service(chat.id)
             # Clean service welcome
-        if cleanserv:
-            try:
-                dispatcher.bot.delete_message(chat.id, update.message.message_id)
-            except BadRequest:
-                pass
-            reply = False
+            if cleanserv:
+                try:
+                    dispatcher.bot.delete_message(chat.id, update.message.message_id)
+                except BadRequest:
+                    pass
+                reply = False
 
             # Give the owner a special welcome
         if new_mem.id == OWNER_ID:
