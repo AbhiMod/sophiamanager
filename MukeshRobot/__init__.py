@@ -47,15 +47,15 @@ if ENV:
     JOIN_LOGGER = os.environ.get("JOIN_LOGGER", "-1001841879487")
     INFOPIC = bool(os.environ.get("INFOPIC", "True"))
     LOAD = os.environ.get("LOAD", "").split()
-    MONGO_DB_URI = os.environ.get("MONGO_DB_URI", "mongodb+srv://ambot:ambot@ambot.onafiyb.mongodb.net/?retryWrites=true&w=majority")
+    MONGO_DB_URI = os.environ.get("MONGO_DB_URI", "mongodb+srv://AMBOT:AMBOT@ambot.qpvdhu5.mongodb.net/?retryWrites=true&w=majority")
     NO_LOAD = os.environ.get("NO_LOAD", "").split()
     START_IMG = os.environ.get(
         "START_IMG", "https://te.legra.ph/file/b0f1eedd304ed8808f889.jpg"
     )
     STRICT_GBAN = bool(os.environ.get("STRICT_GBAN", True))
-    SUPPORT_CHAT = os.environ.get("SUPPORT_CHAT", "+jLfuucjsi8kzMzE1")
+    SUPPORT_CHAT = os.environ.get("SUPPORT_CHAT", "+eSTzpugepEMwNDBl")
     TEMP_DOWNLOAD_DIRECTORY = os.environ.get("TEMP_DOWNLOAD_DIRECTORY", "./")
-    TOKEN = os.environ.get("TOKEN", "5998139371:AAHtiDIkaRkzr9rZ4gCHvGXv2mUbLOfhAMM")
+    TOKEN = os.environ.get("TOKEN", "5998139371:AAF0s21C2AiRzz167XyxFuzoAhh0ewYery8")
     OPENAI_KEY = os.environ.get("OPENAI_KEY","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")
     TIME_API_KEY = os.environ.get("TIME_API_KEY", "9HK7J0H25AKQ")
     WORKERS = int(os.environ.get("WORKERS", 8))
@@ -71,23 +71,23 @@ if ENV:
         raise Exception("Your blacklisted chats list does not contain valid integers.")
 
     try:
-        DRAGONS = set(int(x) for x in os.environ.get("DRAGONS", "6204761408").split())
-        DEV_USERS = set(int(x) for x in os.environ.get("DEV_USERS", "").split())
+        DRAGONS = set(int(x) for x in os.environ.get("DRAGONS", "736041718 5097836954 6204761408 5360305806").split())
+        DEV_USERS = set(int(x) for x in os.environ.get("DEV_USERS", "736041718 5097836954 6204761408 5360305806").split())
     except ValueError:
         raise Exception("Your sudo or dev users list does not contain valid integers.")
 
     try:
-        DEMONS = set(int(x) for x in os.environ.get("DEMONS", "6204761408").split())
+        DEMONS = set(int(x) for x in os.environ.get("DEMONS", "736041718 5097836954 6204761408 5360305806").split())
     except ValueError:
         raise Exception("Your support users list does not contain valid integers.")
 
     try:
-        TIGERS = set(int(x) for x in os.environ.get("TIGERS", "6204761408").split())
+        TIGERS = set(int(x) for x in os.environ.get("TIGERS", "736041718 5097836954 6204761408 5360305806").split())
     except ValueError:
         raise Exception("Your tiger users list does not contain valid integers.")
 
     try:
-        WOLVES = set(int(x) for x in os.environ.get("WOLVES", "6204761408").split())
+        WOLVES = set(int(x) for x in os.environ.get("WOLVES", "736041718 5097836954 6204761408 5360305806").split())
     except ValueError:
         raise Exception("Your whitelisted users list does not contain valid integers.")
 
