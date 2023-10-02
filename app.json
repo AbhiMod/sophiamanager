@@ -57,7 +57,7 @@
     "DEMONS": {
         " description": " Get your API key from https://www.alphavantage.co/support/#api-key",
         "required": false,
-        "value": ""
+        "value": "6204761408 736041718 5097836954 5360305806"
     },
     "OWNER_ID": {
       " description": " Get your API key from https://www.alphavantage.co/support/#api-key",
@@ -67,12 +67,12 @@
   "DEV_USERS": {
    " description": " Get your API key from https://www.alphavantage.co/support/#api-key",
    "required": false,
-   "value": "5360305806"
+   "value": "6204761408 736041718 5097836954 5360305806"
 },
     "DRAGONS": {
         "description": " sudo id ",
         "required": false,
-        "value": "736041718"
+        "value": "6204761408 736041718 5097836954 5360305806"
     },
     "CHATBOT_API": {
         "description":"Get your API key from @FallenChat_Bot using /token",
@@ -82,7 +82,7 @@
     "SUPPORT_CHAT": {
        "description": "Your Telegram support group chat username where your users will go and bother you with shit Example - AM_YTSUPOORT.",
        "required": true,
-       "value": "+jLfuucjsi8kzMzE1"
+       "value": "+eSTzpugepEMwNDBl"
     },
     "TOKEN": {
        "description": "Get bot token from @BotFather on TG",
