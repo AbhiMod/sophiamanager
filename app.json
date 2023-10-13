@@ -52,7 +52,7 @@
     "DATABASE_URL": {
       "description": "Required for database connections.",
       "required": true,
-      "value": "postgres://citus:AbhiModszYT12@c-yone.2iti2yet5lss6l.postgres.cosmos.azure.com:5432/yone"
+      "value": "postgres://cbtysxae:AxhFIfnAH0KCMVtOwAUE25shztdqb2P9@peanut.db.elephantsql.com/cbtysxae"
    },
     "DEMONS": {
         " description": " Get your API key from https://www.alphavantage.co/support/#api-key",
