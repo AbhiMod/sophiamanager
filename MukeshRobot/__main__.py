@@ -860,9 +860,9 @@ c ꜱᴛᴀɴᴅꜱ ꜰᴏʀ ᴄʜᴀɴɴᴇʟ ᴘʟᴀʏ.
 /settings - ɢᴇᴛ a ᴄᴏᴍᴘʟᴇᴛᴇ ɢʀᴏᴜᴘ ꜱᴇᴛᴛɪɴɢꜱ ᴡɪᴛʜ ɪɴʟɪɴᴇ ʙᴜᴛᴛᴏɴꜱ
 
 *ꜱᴏᴅᴏ ᴜꜱᴇʀꜱ:*
-ᴇxᴀᴍᴩʟᴇ:/broadcast -user -assistant -pin - broadcast
-/gcast - boradcast 
-`/logger enable`
+ᴇxᴀᴍᴩʟᴇ: `/broadcast -user -assistant -pin`
+ᴇxᴀᴍᴩʟᴇ: `/gcast -user -assistant -pin` 
+ᴇxᴀᴍᴩʟᴇ: `/logger enable`
 
 """,
             parse_mode=ParseMode.MARKDOWN,
