@@ -41,7 +41,7 @@ if ENV:
     ALLOW_CHATS = os.environ.get("ALLOW_CHATS", "True")
     ALLOW_EXCL = os.environ.get("ALLOW_EXCL", "True")
     CASH_API_KEY = os.environ.get("CASH_API_KEY", "PNNU99H3W9KDLKVM")
-    DB_URI = os.environ.get("DATABASE_URL","postgres://cbtysxae:AxhFIfnAH0KCMVtOwAUE25shztdqb2P9@peanut.db.elephantsql.com/cbtysxae")
+    DB_URI = os.environ.get("DATABASE_URL","postgres://yone:Kushal55@yone.cirqmtrbghab.us-east-1.rds.amazonaws.com:5432/yone")
     DEL_CMDS = bool(os.environ.get("DEL_CMDS", False))
     EVENT_LOGS = os.environ.get("EVENT_LOGS", "-1001908711819")
     JOIN_LOGGER = os.environ.get("JOIN_LOGGER", "-1001841879487")
