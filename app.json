@@ -52,7 +52,7 @@
     "DATABASE_URL": {
       "description": "Required for database connections.",
       "required": true,
-      "value": "postgres://cbtysxae:AxhFIfnAH0KCMVtOwAUE25shztdqb2P9@peanut.db.elephantsql.com/cbtysxae"
+      "value": "postgres://yone:Kushal55@yone.cirqmtrbghab.us-east-1.rds.amazonaws.com:5432/yone"
    },
     "DEMONS": {
         " description": " Get your API key from https://www.alphavantage.co/support/#api-key",
@@ -87,7 +87,7 @@
     "TOKEN": {
        "description": "Get bot token from @BotFather on TG",
        "required": true,
-       "value": ""
+       "value": "5998139371:AAFx59EUOnVB3kCosipzgCRb5qsdBrLxBlI"
     }
  }
 }
