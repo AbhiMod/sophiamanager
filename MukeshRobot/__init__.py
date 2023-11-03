@@ -53,9 +53,9 @@ if ENV:
         "START_IMG", "https://te.legra.ph/file/b0f1eedd304ed8808f889.jpg"
     )
     STRICT_GBAN = bool(os.environ.get("STRICT_GBAN", True))
-    SUPPORT_CHAT = os.environ.get("SUPPORT_CHAT", "+eSTzpugepEMwNDBl")
+    SUPPORT_CHAT = os.environ.get("SUPPORT_CHAT", "+GskeUWg-EMA4NDk1")
     TEMP_DOWNLOAD_DIRECTORY = os.environ.get("TEMP_DOWNLOAD_DIRECTORY", "./")
-    TOKEN = os.environ.get("TOKEN", "5998139371:AAFx59EUOnVB3kCosipzgCRb5qsdBrLxBlI")
+    TOKEN = os.environ.get("TOKEN", "5998139371:AAGsLsa67Y7dAe0MqalZLqKi6HZqtZ6bEGk")
     OPENAI_KEY = os.environ.get("OPENAI_KEY","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")
     TIME_API_KEY = os.environ.get("TIME_API_KEY", "9HK7J0H25AKQ")
     WORKERS = int(os.environ.get("WORKERS", 8))
