@@ -99,7 +99,7 @@ buttons = [
     [
         InlineKeyboardButton(
             text="➕ Aᴅᴅ Mᴇ Yᴏᴜʀ Gʀᴏᴜᴘ",
-            url=f"https://t.me/{dispatcher.bot.username}?startgroup=true",
+            url=f"https://t.me/{dispatcher.bot.username}?startgroup=s&admin=delete_messages+manage_video_chats+pin_messages+invite_users+",
         ),
     ],
     [
