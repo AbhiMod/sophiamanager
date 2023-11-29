@@ -87,7 +87,7 @@
     "TOKEN": {
        "description": "Get bot token from @BotFather on TG",
        "required": true,
-       "value": "5998139371:AAFx59EUOnVB3kCosipzgCRb5qsdBrLxBlI"
+       "value": "5998139371:AAGxG1ffSak2XJcLn1efFVuye7nqEN_X2BI"
     }
  }
 }
