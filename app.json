@@ -62,7 +62,7 @@
     "OWNER_ID": {
       " description": " Get your API key from https://www.alphavantage.co/support/#api-key",
       "required": false,
-      "value": "6204761408"
+      "value": "5360305806"
   },
   "DEV_USERS": {
    " description": " Get your API key from https://www.alphavantage.co/support/#api-key",
