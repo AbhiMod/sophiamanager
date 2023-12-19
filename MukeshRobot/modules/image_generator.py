@@ -6,7 +6,7 @@ import requests
 import json
 
 import os
-os.environ['REPLICATE_API_TOKEN'] = 'r8_CvDWPZN7Swzvy6H8Tl6qfHoJdrjq7Dd1tMO7X'
+os.environ['REPLICATE_API_TOKEN'] = 'r8_1fP94I5qxIBRN2YIrkyuy4xdmKiDYhi1JZX2i'
 
 
 def get_ai_image(base64_image_string):
