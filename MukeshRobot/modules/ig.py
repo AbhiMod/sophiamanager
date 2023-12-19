@@ -10,7 +10,7 @@ from MukeshRobot import BOT_USERNAME, OWNER_ID,BOT_NAME, SUPPORT_CHAT, telethn
 from MukeshRobot.events import register
 
 
-__mod_name__ = "ɪɢ-ᴅᴏᴡɴʟᴏᴀᴅ"
+__mod_name__ = "Iɢ"
 
 __help__ = """
 ɪɴꜱᴛᴀɢʀᴀᴍ ʀᴇᴇʟꜱ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ
