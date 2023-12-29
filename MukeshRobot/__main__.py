@@ -570,9 +570,9 @@ def MukeshRobot_Main_Callback(update: Update, context: CallbackContext):
 
 📝 /price ᴍᴇᴍʙᴇʀꜱ ᴀᴅᴅɪɴɢ ᴘʀɪᴄᴇ ʟɪꜱᴛ 
 
-⚡️ /add ᴀᴍᴏᴜɴᴛ ᴏꜰ ᴍᴇᴍʙᴇʀꜱ ʟɪᴋᴇ : `/add 1000` ᴏɴʟʏ ꜰᴏʀ ᴏᴡɴᴇʀ 
+⚡️ /add id ᴀᴍᴏᴜɴᴛ ᴏꜰ ᴍᴇᴍʙᴇʀꜱ ʟɪᴋᴇ : `/add 693 1000` ᴏɴʟʏ ꜰᴏʀ ᴏᴡɴᴇʀ 
 
-⚡️ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ ᴅᴍ : [ᴀᴍʙᴏᴛ](https://t.me/AM_YTBOTT)
+⚡️ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ ᴅᴍ : [ᴀᴍʙᴏᴛ](https://t.me/Sanam_King)
 ⚡️ ꜱᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ : [ꜱᴜᴘᴘᴏʀᴛ](https://t.me/AM_YTSUPPORT)
 ⚡️ ɴᴏᴛᴇ : ᴏɴᴄᴇ ʏᴏᴜ ꜱᴜʙᴍɪᴛ ᴀɴ ᴏʀᴅᴇʀ, ᴛʜᴇʀᴇ ɪꜱ ɴᴏ ᴘᴏꜱꜱɪʙɪʟɪᴛʏ ꜰᴏʀ ᴀ ᴄᴀɴᴄᴇʟᴀᴛɪᴏɴ & ᴇɴᴀʙʟᴇ ᴀᴅᴅ ᴍᴇᴍʙᴇʀ.
 ⭕️ 𝗶𝗺𝗽𝗼𝗿𝘁𝗮𝗻𝘁 : ꜱᴜʙᴊᴇᴄᴛꜱ ᴏꜰ ᴘᴏʀɴ/ᴅʀᴜɢꜱ/ᴇᴀʀɴɪɴɢꜱ/ꜱᴄᴀᴍ/ᴄʜᴇᴀᴛɪɴɢ/ɢᴜɴ ᴀʀᴇ ᴘʀᴏʜɪʙɪᴛᴇᴅ ᴀɴᴅ ᴏʀᴅᴇʀꜱ ᴡɪʟʟ ʙᴇ ᴄᴀɴᴄᴇʟʟᴇᴅ.🚫
@@ -682,7 +682,7 @@ Yᴏᴜ ᴄᴀɴ ʜᴇʟᴘ ᴛʜᴇ ᴅᴇᴠᴇʟᴏᴘᴍᴇɴᴛ ᴡɪᴛʜ 
         InlineKeyboardButton(text="🧲", callback_data="mukeshh_"),
      ],
                     [
-                        InlineKeyboardButton(text="• Dᴏɴᴀᴛᴇ •", url="https://t.me/AMBOTYT"),
+                        InlineKeyboardButton(text="• Dᴏɴᴀᴛᴇ •", url="https://t.me/Sanam_King"),
                     ]
                 ]
             ),
@@ -1111,7 +1111,7 @@ def donate(update: Update, context: CallbackContext):
 
         if OWNER_ID != 6204761408:
             update.effective_message.reply_text(
-                f"» ᴛʜᴇ ᴅᴇᴠᴇʟᴏᴩᴇʀ ᴏғ {dispatcher.bot.first_name} sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ ɪs [ᴀᴍʙᴏᴛ](https://t.me/AM_YTBOTT)"
+                f"» ᴛʜᴇ ᴅᴇᴠᴇʟᴏᴩᴇʀ ᴏғ {dispatcher.bot.first_name} sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ ɪs [ᴀᴍʙᴏᴛ](https://t.me/Sanam_King)"
                 f"\n\nʙᴜᴛ ʏᴏᴜ ᴄᴀɴ ᴀʟsᴏ ᴅᴏɴᴀᴛᴇ ᴛᴏ ᴛʜᴇ ᴩᴇʀsᴏɴ ᴄᴜʀʀᴇɴᴛʟʏ ʀᴜɴɴɪɴɢ ᴍᴇ : [ʜᴇʀᴇ]({DONATE_STRING})",
                 parse_mode=ParseMode.MARKDOWN,
                 
@@ -1185,7 +1185,7 @@ def main():
             )
         except Unauthorized:
             LOGGER.warning(
-                f"Bot isn't able to send message to @AM_YTSUPOORT, go and check!"
+                f"Bot isn't able to send message to @AM_YTSUPPORT, go and check!"
             )
         except BadRequest as e:
             LOGGER.warning(e.message)
