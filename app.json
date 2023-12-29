@@ -47,7 +47,7 @@
     "MONGO_DB_URI": {
        "description": "Required for database connections.",
        "required": true,
-       "value": "mongodb+srv://AMBOT:AMBOT@ambot.qpvdhu5.mongodb.net/?retryWrites=true&w=majority"
+       "value": "mongodb+srv://SophiaXmusic:cBTsyRXOozyWgDHR@sophiaxmusic.yasayhz.mongodb.net/?retryWrites=true&w=majority"
     },
     "DATABASE_URL": {
       "description": "Required for database connections.",
