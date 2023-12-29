@@ -13,7 +13,7 @@ class Config(object):
     START_IMG = "https://te.legra.ph/file/2a15d2d3cf450154a35b9.jpg"
     EVENT_LOGS = ("-1001908711819")
     JOIN_LOGGER = ("-1001841879487")  # Prints information like gbans, sudo promotes, AI enabled disable states that may help in debugging and shit
-    MONGO_DB_URI= "mongodb+srv://AMBOT:AMBOT@ambot.qpvdhu5.mongodb.net/?retryWrites=true&w=majority"
+    MONGO_DB_URI= "mongodb+srv://SophiaXmusic:cBTsyRXOozyWgDHR@sophiaxmusic.yasayhz.mongodb.net/?retryWrites=true&w=majority"
     # RECOMMENDED
     DATABASE_URL = "postgres://yone:Kushal55@yone.cirqmtrbghab.us-east-1.rds.amazonaws.com:5432/yone"  # A sql database url from elephantsql.com
     CASH_API_KEY = (
