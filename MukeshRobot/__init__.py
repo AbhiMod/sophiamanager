@@ -47,7 +47,7 @@ if ENV:
     JOIN_LOGGER = os.environ.get("JOIN_LOGGER", "-1001841879487")
     INFOPIC = bool(os.environ.get("INFOPIC", "True"))
     LOAD = os.environ.get("LOAD", "").split()
-    MONGO_DB_URI = os.environ.get("MONGO_DB_URI", "mongodb+srv://AMBOT:AMBOT@ambot.qpvdhu5.mongodb.net/?retryWrites=true&w=majority")
+    MONGO_DB_URI = os.environ.get("MONGO_DB_URI", "mongodb+srv://SophiaXmusic:cBTsyRXOozyWgDHR@sophiaxmusic.yasayhz.mongodb.net/?retryWrites=true&w=majority")
     NO_LOAD = os.environ.get("NO_LOAD", "").split()
     START_IMG = os.environ.get(
         "START_IMG", "https://te.legra.ph/file/b0f1eedd304ed8808f889.jpg"
