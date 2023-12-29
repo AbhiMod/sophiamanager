@@ -16,7 +16,7 @@ def totranslate(update: Update, context: CallbackContext) -> None:
             "ʀᴇᴘʟʏ ᴛᴏ ᴍᴇssᴀɢᴇs ᴏʀ ᴡʀɪᴛᴇ ᴍᴇssᴀɢᴇs ғʀᴏᴍ ᴏᴛʜᴇʀ ʟᴀɴɢᴜᴀɢᴇs ​​ғᴏʀ ᴛʀᴀɴsʟᴀᴛɪɴɢ ɪɴᴛᴏ ᴛʜᴇ ɪɴᴛᴇɴᴅᴇᴅ ʟᴀɴɢᴜᴀɢᴇ\n\n"
             "ᴇxᴀᴍᴘʟᴇ: `/tr ᴇɴ-ʜɪ` ᴛᴏ ᴛʀᴀɴsʟᴀᴛᴇ ғʀᴏᴍ ᴇɴɢʟɪsʜ ᴛᴏ ʜɪɴᴅɪ\n"
             "ᴏʀ ᴜsᴇ: `/tr en` ғᴏʀ ᴀᴜᴛᴏᴍᴀᴛɪᴄ ᴅᴇᴛᴇᴄᴛɪᴏɴ ᴀɴᴅ ᴛʀᴀɴsʟᴀᴛɪɴɢ ɪᴛ ɪɴᴛᴏ ᴇɴɢʟɪsʜ.\n"
-            "ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ sᴇᴇ [ʟɪsᴛ ᴏғ ᴀᴠᴀɪʟᴀʙʟᴇ ʟᴀɴɢᴜᴀɢᴇ ᴄᴏᴅᴇs](https://t.me/AMBOTYT/777).",
+            "ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ sᴇᴇ [ʟɪsᴛ ᴏғ ᴀᴠᴀɪʟᴀʙʟᴇ ʟᴀɴɢᴜᴀɢᴇ ᴄᴏᴅᴇs](https://t.me/AbhiModszYT_Return/1).",
             parse_mode="markdown",
             disable_web_page_preview=True,
         )
@@ -78,7 +78,7 @@ from telethon import __version__ as s
 from MukeshRobot import OWNER_ID, dispatcher
 from MukeshRobot import pbot as client
 
-Mukesh = "https://graph.org/file/f367dd3af2e2d0b9c9302.jpg"
+Mukesh = "https://graph.org/file/69ed81af94dd4b2f4784f.jpg"
 
 
 @client.on_message(filters.command(["repo", "source"]))
@@ -93,7 +93,7 @@ async def repo(client, message):
 **» ᴛᴇʟᴇᴛʜᴏɴ ᴠᴇʀsɪᴏɴ :** `{s}` 
 **» ᴘʏʀᴏɢʀᴀᴍ ᴠᴇʀsɪᴏɴ :** `{z}`
 
-**ɢʀᴏᴜᴘ ✘ ᴄᴏɴᴛʀᴏʟʟᴇʀ**
+**ꜱᴏᴘʜɪᴀ ✘ ʀᴏʙᴏᴛ ᴘᴏᴡᴇʀ ʙʏ : @AMBOTYT **
 """,
         reply_markup=InlineKeyboardMarkup(
             [
@@ -103,7 +103,7 @@ async def repo(client, message):
                     ),
                     InlineKeyboardButton(
                         "• ʀᴇᴘᴏ •",
-                        url="\x68\x74\x74\x70\x73\x3A\x2F\x2F\x67\x69\x74\x68\x75\x62\x2E\x63\x6F\x6D\x2F\x41\x62\x68\x69\x4D\x6F\x64\x73\x7A\x59\x54\x3F\x74\x61\x62\x3D\x72\x65\x70\x6F\x73\x69\x74\x6F\x72\x69\x65\x73",
+                        url="https://t.me/AbhiModszYT_Return/1",
                     ),
                 ]
             ]
