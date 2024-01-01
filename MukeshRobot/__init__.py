@@ -71,23 +71,23 @@ if ENV:
         raise Exception("Your blacklisted chats list does not contain valid integers.")
 
     try:
-        DRAGONS = set(int(x) for x in os.environ.get("DRAGONS","736041718 5097836954 5360305806 2066469485").split())
-        DEV_USERS = set(int(x) for x in os.environ.get("DEV_USERS","6197889981 736041718 5097836954 5360305806 2066469485").split())
+        DRAGONS = set(int(x) for x in os.environ.get("DRAGONS","736041718 5097836954 5360305806").split())
+        DEV_USERS = set(int(x) for x in os.environ.get("DEV_USERS","6197889981 736041718 5097836954 5360305806").split())
     except ValueError:
         raise Exception("Your sudo or dev users list does not contain valid integers.")
 
     try:
-        DEMONS = set(int(x) for x in os.environ.get("DEMONS","6197889981 736041718 5097836954 5360305806 2066469485").split())
+        DEMONS = set(int(x) for x in os.environ.get("DEMONS","6197889981 736041718 5097836954 5360305806").split())
     except ValueError:
         raise Exception("Your support users list does not contain valid integers.")
 
     try:
-        TIGERS = set(int(x) for x in os.environ.get("TIGERS","736041718 5097836954 5360305806 2066469485").split())
+        TIGERS = set(int(x) for x in os.environ.get("TIGERS","736041718 5097836954 5360305806").split())
     except ValueError:
         raise Exception("Your tiger users list does not contain valid integers.")
 
     try:
-        WOLVES = set(int(x) for x in os.environ.get("WOLVES", "736041718 5097836954 5360305806 2066469485").split())
+        WOLVES = set(int(x) for x in os.environ.get("WOLVES", "736041718 5097836954 5360305806").split())
     except ValueError:
         raise Exception("Your whitelisted users list does not contain valid integers.")
 
