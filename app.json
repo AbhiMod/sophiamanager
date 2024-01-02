@@ -47,7 +47,7 @@
     "MONGO_DB_URI": {
        "description": "Required for database connections.",
        "required": true,
-       "value": "mongodb+srv://SophiaXmusic:cBTsyRXOozyWgDHR@sophiaxmusic.yasayhz.mongodb.net/?retryWrites=true&w=majority"
+       "value": "mongodb+srv://SophiaMusic:zNGvnNT9mbe5XZnC@cluster0.sn1ilu6.mongodb.net/?retryWrites=true&w=majority"
     },
     "DATABASE_URL": {
       "description": "Required for database connections.",
@@ -57,7 +57,7 @@
     "DEMONS": {
         " description": " Get your API key from https://www.alphavantage.co/support/#api-key",
         "required": false,
-        "value": "6197889981 736041718 5097836954 5360305806 5766286917"
+        "value": "5360305806 6109442416 736041718"
     },
     "OWNER_ID": {
       " description": " Get your API key from https://www.alphavantage.co/support/#api-key",
@@ -67,12 +67,12 @@
   "DEV_USERS": {
    " description": " Get your API key from https://www.alphavantage.co/support/#api-key",
    "required": false,
-   "value": "6197889981 736041718 5097836954 5360305806 5766286917"
+   "value": "5360305806 6109442416 736041718"
 },
     "DRAGONS": {
         "description": " sudo id ",
         "required": false,
-        "value": "736041718 5097836954 5360305806 5766286917"
+        "value": "5360305806 6109442416 736041718"
     },
     "CHATBOT_API": {
         "description":"Get your API key from @FallenChat_Bot using /token",
