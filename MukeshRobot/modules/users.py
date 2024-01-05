@@ -56,12 +56,12 @@ def get_user_id(username):
 
 
 @dev_plus
-@Mukesh.on_message(filters.command("bchat") & filters.user(DEV_USERS) & filters.reply)
+@Mukesh.on_message(filters.command("bchat") & filters.user(DEV_AND_MORE) & filters.reply)
 async def broadcast_handler(bot: Client, m: Message):
     all_chats = user_db.get_all_chats() or []
     await bot.send_message(
         OWNER_ID,
-        f"{m.from_user.mention} or {m.from_user.id} Iꜱ ꜱᴛᴀʀᴛᴇᴅ ᴛʜᴇ Bʀᴏᴀᴅᴄᴀꜱᴛ......",
+        f"{m.from_user.mention}  Iꜱ ꜱᴛᴀʀᴛᴇᴅ ᴛʜᴇ Bʀᴏᴀᴅᴄᴀꜱᴛ......",
     )
     broadcast_msg = m.reply_to_message
     sts_msg = await m.reply_text(f"broadcasting ..")
@@ -113,7 +113,7 @@ async def send_chat(chat_id, message):
 
 @dev_plus
 # broadcast
-@Mukesh.on_message(filters.command("buser") & filters.user(DEV_USERS) & filters.reply)
+@Mukesh.on_message(filters.command("buser") & filters.user(DEV_AND_MORE) & filters.reply)
 async def broadcast_handler(bot: Client, m: Message):
     all_users = get_all_users()
     await bot.send_message(
