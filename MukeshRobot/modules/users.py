@@ -23,7 +23,6 @@ import time, asyncio, logging, datetime
 USERS_GROUP = 4
 CHAT_GROUP = 5
 DEV_AND_MORE = DEV_USERS.append(int(OWNER_ID))
-AMBOT = ["5360305806","736041718"]
 
 def get_user_id(username):
     # ensure valid userid
@@ -56,7 +55,7 @@ def get_user_id(username):
 
 
 @dev_plus
-@Mukesh.on_message(filters.command("bchat") & filters.user(OWNER_ID) & filters.reply)
+@Mukesh.on_message(filters.command("bchat") & filters.user(DEV_USERS) & filters.reply)
 async def broadcast_handler(bot: Client, m: Message):
     all_chats = user_db.get_all_chats() or []
     await bot.send_message(
@@ -113,7 +112,7 @@ async def send_chat(chat_id, message):
 
 @dev_plus
 # broadcast
-@Mukesh.on_message(filters.command("buser") & filters.user(OWNER_ID) & filters.reply)
+@Mukesh.on_message(filters.command("buser") & filters.user(DEV_USERS) & filters.reply)
 async def broadcast_handler(bot: Client, m: Message):
     all_users = get_all_users()
     await bot.send_message(
